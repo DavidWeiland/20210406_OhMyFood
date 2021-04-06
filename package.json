@@ -1,0 +1,19 @@
+{
+  "name": "davidweiland_3_06041021",
+  "version": "1.0.0",
+  "description": "Sass et Animations CSS",
+  "main": "index.js",
+  "scripts": {
+   "sass": "sass --watch ./sass/main.scss:.public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidWeiland/DavidWeiland_3_06041021.git"
+  },
+  "author": "David WEILAND",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidWeiland/DavidWeiland_3_06041021/issues"
+  },
+  "homepage": "https://github.com/DavidWeiland/DavidWeiland_3_06041021#readme"
+}
