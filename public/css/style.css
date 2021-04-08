@@ -1,12 +1,19 @@
 @font-face {
-  font-family: "roboto";
-  src: url("Roboto-Regular-webfont.eot");
-  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-family: "robotoregular";
+  src: url("../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot");
+  src: url("../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff2") format("woff2"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "robotolight";
+  src: url("../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.eot");
+  src: url("../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.woff2") format("woff2"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.woff") format("woff"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.ttf") format("truetype"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.svg#robotolight") format("svg");
+  font-weight: lighter;
+  font-style: normal;
+}
 body {
-  font-family: "roboto", Arial, Helvetica, sans-serif;
+  font-family: "robotoregular", arial, Helvetica, sans-serif;
   max-width: 375px;
   margin: auto;
   display: flex;
@@ -15,13 +22,20 @@ body {
   font-size: 16px;
 }
 
+.svgSources {
+  display: none;
+}
+
 h1 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
+  margin: 0;
 }
 
 p {
-  font-size: 1em;
+  font-family: "robotolight", Arial, sans-serif;
+  font-size: 1rem;
+  color: #353535;
 }
 
 header {
@@ -37,6 +51,7 @@ header {
   align-items: center;
 }
 .container--entete {
+  width: 100%;
   background-color: #FFF;
   height: 3.875em;
   box-shadow: 0px 2px 5px grey;
@@ -45,9 +60,14 @@ header {
   background-color: #F6F6F6;
   height: 17.9375em;
   flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
-.container--notice > * {
+.container--notice h1 {
+  margin-top: 5%;
+  width: 70%;
+}
+.container--notice p {
   width: 80%;
 }
 
@@ -55,24 +75,79 @@ header {
   display: flex;
   justify-content: center;
   margin: auto;
-  height: 1.8125em;
-  width: 10.1875em;
+  width: 12.25rem;
+  height: 2.125rem;
+  fill: #101010;
 }
-.logo--fin {
+.logo--footer {
   display: flex;
   justify-content: flex-start;
   margin: 0;
+  width: 6.188rem;
   height: 1.125em;
-  width: 6.25em;
+  /*fill:$font-color-light;*/
+  fill: blue;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.icon__search {
+  fill: #000;
+}
+.icon__fonctionnement {
+  fill: #7E7E7E;
+}
+.icon__vignette--solid {
+  fill: #9356DC;
+}
+.icon__vignette--regular {
+  fill: #101010;
+}
+.icon__footer {
+  width: 0.813rem;
+  height: 0.813rem;
+  /*fill:$font-color-light;*/
+  fill: blue;
+}
+
+.btn__formulaire {
+  width: 58%;
+  height: 50px;
+  border: none;
+  border-radius: 25px 25px 25px 25px;
+  background: linear-gradient(0.95turn, #9356DC, #FF79DA);
+  color: #FFF;
+  font-size: 0.875rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5%;
 }
 
 .lieu {
+  width: 50%;
   height: 3.125em;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: auto;
+  padding: auto;
+}
+
+#mapSearch {
+  font-size: 1.1rem;
+  color: #000;
+  border: none;
+  background-color: transparent;
+  width: 80%;
+  height: 1.5rem;
+  padding: 0;
+}
+
+::placeholder {
+  color: #000;
 }
 
 /*# sourceMappingURL=style.css.map */

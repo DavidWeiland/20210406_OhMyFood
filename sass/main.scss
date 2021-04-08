@@ -1,17 +1,43 @@
 @font-face {
-    font-family: 'roboto';
-    src: url('Roboto-Regular-webfont.eot');
-    src: url('Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Roboto-Regular-webfont.woff2') format('woff2'),
-         url('Roboto-Regular-webfont.woff') format('woff'),
-         url('Roboto-Regular-webfont.ttf') format('truetype'),
-         url('Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot');
+    src: url('../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.eot');
+    src: url('../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.woff') format('woff'),
+         url('../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.svg#robotolight') format('svg');
+    font-weight:lighter;
+    font-style: normal;
+}
+
+$primary-color: #9356DC;
+$secondary-color:#FF79DA;
+$tertiary-color:#99E2D0;
+$bg-base:#EAEAEA;
+$bg-primary-color:#FFF;
+$bg-secondary-color:#F6F6F6;
+$bg-tertiary-color:#353535;
+$font-color-base:#000;
+$font-color-light:#FFF;
+$font-color-mid:#7E7E7E;
+$font-color-dark:#101010;
+
+
+
 body{
-    font-family:'roboto', Arial, Helvetica, sans-serif;
+    font-family:'robotoregular', arial, Helvetica, sans-serif;
     max-width: 375px;
     margin:auto;
     display: flex;
@@ -19,34 +45,50 @@ body{
     justify-content: center;
     font-size:16px;
 }
+.svgSources{
+    display: none;
+}
+
 h1{
-    font-size:1.5em;
+    font-size:1.3em;
     font-weight: bold;
+    margin:0;
 }
+
 p{
-    font-size:1em;
+    font-family:'robotolight', Arial, sans-serif;
+    font-size:1rem;
+    color:$bg-tertiary-color;
 }
+
 header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #EAEAEA;
+    background-color: $bg-base;
 }
+
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
     &--entete{
-        background-color: #FFF;
+        width: 100%;
+        background-color: $bg-primary-color;
         height: 3.875em;
         box-shadow:0px 2px 5px grey;
     }
     &--notice{
-        background-color: #F6F6F6;
+        background-color: $bg-secondary-color;
         height: 17.9375em;
         flex-direction: column;
+        justify-content:center;
         text-align: center;
-        > *{
+        h1{
+            margin-top: 5%;
+            width: 70%;
+        }
+        p {
             width: 80%;
         }
     }
@@ -57,22 +99,83 @@ header{
         display: flex;
         justify-content: center;
         margin: auto;
-        height: 1.8125em;
-        width: 10.1875em;
+        width: 12.25rem;
+        height: 2.125rem;
+        fill:$font-color-dark;
     }
-    &--fin{
+    &--footer{
         display: flex;
         justify-content: flex-start;
         margin: 0;
+        width: 6.188rem;
         height:1.125em;
-        width: 6.25em;
+        /*fill:$font-color-light;*/
+        fill:blue;
     }
 }
+
+
+.icon{
+    width: 1.25rem;
+    height: 1.25rem;
+    &__search{
+        fill:$font-color-base;
+    }
+    &__fonctionnement{
+        fill:$font-color-mid;
+    }
+    &__vignette{
+        &--solid{
+            fill:$primary-color;
+        }
+        &--regular{
+            fill:$font-color-dark;
+        }
+    }
+    &__footer{
+        width: 0.813rem;
+        height: 0.813rem;
+        /*fill:$font-color-light;*/
+        fill:blue;
+    }
+}
+
+.btn{
+    &__formulaire{
+        width: 58%;
+        height: 50px;
+        border: none;
+        border-radius: 25px 25px 25px 25px;
+        background: linear-gradient(0.95turn, $primary-color, $secondary-color);
+        color: $font-color-light;
+        font-size: 0.875rem;
+        font-weight: bold;
+        cursor: pointer;
+        margin:5%;
+    }
+}
+
 .lieu{
+    width: 50%;
     height: 3.125em;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: auto;
+    padding:auto;
+}
+
+#mapSearch{
+    font-size: 1.1rem;
+    color:$font-color-base;
+    border:none;
+    background-color:transparent;
+    width: 80%;
+    height: 1.5rem;
+    padding: 0;
+}
+
+::placeholder{
+    color:$font-color-base;
 }
