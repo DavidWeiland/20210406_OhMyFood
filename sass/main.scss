@@ -23,6 +23,7 @@
 }
 
 $primary-color: #9356DC;
+$primary-color-light: #F5EDFF;
 $secondary-color:#FF79DA;
 $tertiary-color:#99E2D0;
 $bg-base:#EAEAEA;
@@ -31,34 +32,41 @@ $bg-secondary-color:#F6F6F6;
 $bg-tertiary-color:#353535;
 $font-color-base:#000;
 $font-color-light:#FFF;
-$font-color-mid:#7E7E7E;
+$font-color-mid-light: #C6C6C6;
+$font-color-mid-dark:#7E7E7E;
 $font-color-dark:#101010;
 
 
-
+@media screen and (max-device-width:425px){
+    
 body{
     font-family:'robotoregular', arial, Helvetica, sans-serif;
-    max-width: 375px;
+    width: 100%;
     margin:auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size:16px;
+    font-size:50px;
 }
 .svgSources{
     display: none;
 }
 
 h1{
-    font-size:1.3em;
+    font-size:1.2em;
     font-weight: bold;
     margin:0;
 }
 
 p{
     font-family:'robotolight', Arial, sans-serif;
-    font-size:1rem;
+    font-size:0.81em;
     color:$bg-tertiary-color;
+}
+h2{
+    font-size:1.2em;
+    font-weight: bold;
+    margin:0;
 }
 
 header{
@@ -75,17 +83,17 @@ header{
     &--entete{
         width: 100%;
         background-color: $bg-primary-color;
-        height: 3.875em;
-        box-shadow:0px 2px 5px grey;
+        height: auto;
+        box-shadow:0 0.125em 0.313em $font-color-mid-dark;
     }
     &--notice{
         background-color: $bg-secondary-color;
-        height: 17.9375em;
+        height: auto;
         flex-direction: column;
         justify-content:center;
         text-align: center;
+        padding: 5%;
         h1{
-            margin-top: 5%;
             width: 70%;
         }
         p {
@@ -99,30 +107,31 @@ header{
         display: flex;
         justify-content: center;
         margin: auto;
-        width: 12.25rem;
-        height: 2.125rem;
+        width: 46%;
+        height: auto;
         fill:$font-color-dark;
     }
     &--footer{
         display: flex;
         justify-content: flex-start;
-        margin: 0;
-        width: 6.188rem;
+        margin-top: 1.25em;
+        width: 6.188em;
         height:1.125em;
-        /*fill:$font-color-light;*/
-        fill:blue;
+        fill:$font-color-light;
     }
 }
 
 
 .icon{
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 0.9em;
+    height: 0.9em;
     &__search{
         fill:$font-color-base;
     }
     &__fonctionnement{
-        fill:$font-color-mid;
+        fill:$font-color-mid-dark;
+        width: 1.5em;
+        height: 1.5em;
     }
     &__vignette{
         &--solid{
@@ -133,49 +142,124 @@ header{
         }
     }
     &__footer{
-        width: 0.813rem;
-        height: 0.813rem;
-        /*fill:$font-color-light;*/
-        fill:blue;
+        width: 0.813em;
+        height: 0.813em;
+        fill:$font-color-light;
     }
 }
 
 .btn{
     &__formulaire{
         width: 58%;
-        height: 50px;
+        height: 3.125em;
         border: none;
-        border-radius: 25px 25px 25px 25px;
+        border-radius: 1.563em 1.563em 1.563em 1.563em;
         background: linear-gradient(0.95turn, $primary-color, $secondary-color);
         color: $font-color-light;
-        font-size: 0.875rem;
+        font-size: 0.688em;
         font-weight: bold;
         cursor: pointer;
         margin:5%;
+        box-shadow: 0 0.313em 0.313em $font-color-mid-light;
     }
 }
 
 .lieu{
-    width: 50%;
-    height: 3.125em;
+    width: 40%;
+    height:auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: auto;
-    padding:auto;
+    padding:1%;
 }
 
 #mapSearch{
-    font-size: 1.1rem;
+    font-size: 0.81em;
     color:$font-color-base;
     border:none;
     background-color:transparent;
     width: 80%;
-    height: 1.5rem;
+    height: 1.5em;
     padding: 0;
 }
 
 ::placeholder{
     color:$font-color-base;
+}
+
+.fonctionnement{
+    margin-top: 1.875em;
+    margin-bottom: 1.875em;
+    & > *{
+        width: 90%;
+        margin: 5%;
+    }
+    &__list{
+        list-style-type:none;
+        list-style-position: inside;
+        padding:0;
+        &--element{
+            background-color: $bg-secondary-color;
+            border-radius: 1.563em;
+            display: flex;
+            justify-content:flex-start;
+            align-items: center;
+            height: 4.688em;
+            width: 95%;
+            margin:5%;
+            box-shadow: 0 0.313em 0.313em $font-color-mid-light;
+            > *{
+                margin:2%;
+            }
+            &:hover{
+                background-color: $primary-color-light;
+                .icon__fonctionnement{
+                    fill:$primary-color;
+                }
+            }
+        }
+        &--puce{
+            background-color: $primary-color;
+            color:$font-color-light;
+            text-align: center;
+            vertical-align: center;
+            width: 1.5em;
+            height: 1.5em;
+            font-size: 0.81em;
+            border-radius:100%;
+            margin-left: -0.81em;
+        }
+        &--text{
+            width: 80%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding:2%;
+            font-family: 'roboto_regular', Arial, sans-serif;
+            font-weight: bold;
+            svg {
+                margin-right:5%;
+            }
+        }
+    }
+    
+}
+
+footer{
+    background-color: $bg-tertiary-color;
+    color:$font-color-light;
+    padding:5%;
+    & ul{
+        list-style-type: none;
+        padding:0;
+        & li{
+            margin-top:2%;
+        }
+    }
+}
+
+    
+    
 }
