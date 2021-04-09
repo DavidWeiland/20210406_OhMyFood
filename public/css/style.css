@@ -12,9 +12,6 @@
   font-weight: lighter;
   font-style: normal;
 }
-/*
-@media screen and (max-device-width:425px){
- */
 body {
   font-family: "robotoregular", arial, Helvetica, sans-serif;
   width: 100%;
@@ -43,10 +40,12 @@ p {
 
 header {
   background-color: #EAEAEA;
+  height: auto;
 }
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -55,11 +54,11 @@ header {
   background-color: #FFF;
   height: auto;
   box-shadow: 0 0.125em 0.313em #7E7E7E;
+  position: fixed;
 }
 .container--notice {
   background-color: #F6F6F6;
   height: auto;
-  flex-direction: column;
   justify-content: center;
   text-align: center;
   padding: 5%;
@@ -128,11 +127,11 @@ header {
 
 .lieu {
   width: 40%;
-  height: auto;
+  height: 220px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   margin: auto;
   padding: 1%;
 }
@@ -220,8 +219,5 @@ footer ul {
 footer ul li {
   margin-top: 2%;
 }
-
-/*    
-}*/
 
 /*# sourceMappingURL=style.css.map */

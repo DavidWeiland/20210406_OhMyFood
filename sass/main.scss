@@ -35,10 +35,7 @@ $font-color-light:#FFF;
 $font-color-mid-light: #C6C6C6;
 $font-color-mid-dark:#7E7E7E;
 $font-color-dark:#101010;
-
-/*
-@media screen and (max-device-width:425px){
- */   
+ 
 body{
     font-family:'robotoregular', arial, Helvetica, sans-serif;
     width: 100%;
@@ -69,10 +66,12 @@ h2{
 
 header{
     background-color: $bg-base;
+    height: auto;
 }
 
 .container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     &--entete{
@@ -80,14 +79,16 @@ header{
         background-color: $bg-primary-color;
         height: auto;
         box-shadow:0 0.125em 0.313em $font-color-mid-dark;
+        position: fixed;
     }
     &--notice{
         background-color: $bg-secondary-color;
         height: auto;
-        flex-direction: column;
+        
         justify-content:center;
         text-align: center;
         padding: 5%;
+        
         h1{
             width: 70%;
         }
@@ -161,11 +162,11 @@ header{
 
 .lieu{
     width: 40%;
-    height:auto;
+    height:220px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     margin: auto;
     padding:1%;
 }
@@ -254,7 +255,3 @@ footer{
         }
     }
 }
-
-    
-/*    
-}*/
