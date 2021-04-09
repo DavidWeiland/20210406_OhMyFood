@@ -36,9 +36,9 @@ $font-color-mid-light: #C6C6C6;
 $font-color-mid-dark:#7E7E7E;
 $font-color-dark:#101010;
 
-
+/*
 @media screen and (max-device-width:425px){
-    
+ */   
 body{
     font-family:'robotoregular', arial, Helvetica, sans-serif;
     width: 100%;
@@ -64,15 +64,10 @@ p{
     color:$bg-tertiary-color;
 }
 h2{
-    font-size:1.2em;
-    font-weight: bold;
-    margin:0;
+    @extend h1;
 }
 
 header{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     background-color: $bg-base;
 }
 
@@ -261,5 +256,5 @@ footer{
 }
 
     
-    
-}
+/*    
+}*/

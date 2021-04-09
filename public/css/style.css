@@ -12,221 +12,216 @@
   font-weight: lighter;
   font-style: normal;
 }
-@media screen and (max-device-width: 425px) {
-  body {
-    font-family: "robotoregular", arial, Helvetica, sans-serif;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 50px;
-  }
-
-  .svgSources {
-    display: none;
-  }
-
-  h1 {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 0;
-  }
-
-  p {
-    font-family: "robotolight", Arial, sans-serif;
-    font-size: 0.81em;
-    color: #353535;
-  }
-
-  h2 {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 0;
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #EAEAEA;
-  }
-
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .container--entete {
-    width: 100%;
-    background-color: #FFF;
-    height: auto;
-    box-shadow: 0 0.125em 0.313em #7E7E7E;
-  }
-  .container--notice {
-    background-color: #F6F6F6;
-    height: auto;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 5%;
-  }
-  .container--notice h1 {
-    width: 70%;
-  }
-  .container--notice p {
-    width: 80%;
-  }
-
-  .logo--debut {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 46%;
-    height: auto;
-    fill: #101010;
-  }
-  .logo--footer {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 1.25em;
-    width: 6.188em;
-    height: 1.125em;
-    fill: #FFF;
-  }
-
-  .icon {
-    width: 0.9em;
-    height: 0.9em;
-  }
-  .icon__search {
-    fill: #000;
-  }
-  .icon__fonctionnement {
-    fill: #7E7E7E;
-    width: 1.5em;
-    height: 1.5em;
-  }
-  .icon__vignette--solid {
-    fill: #9356DC;
-  }
-  .icon__vignette--regular {
-    fill: #101010;
-  }
-  .icon__footer {
-    width: 0.813em;
-    height: 0.813em;
-    fill: #FFF;
-  }
-
-  .btn__formulaire {
-    width: 58%;
-    height: 3.125em;
-    border: none;
-    border-radius: 1.563em 1.563em 1.563em 1.563em;
-    background: linear-gradient(0.95turn, #9356DC, #FF79DA);
-    color: #FFF;
-    font-size: 0.688em;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 5%;
-    box-shadow: 0 0.313em 0.313em #C6C6C6;
-  }
-
-  .lieu {
-    width: 40%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    padding: 1%;
-  }
-
-  #mapSearch {
-    font-size: 0.81em;
-    color: #000;
-    border: none;
-    background-color: transparent;
-    width: 80%;
-    height: 1.5em;
-    padding: 0;
-  }
-
-  ::placeholder {
-    color: #000;
-  }
-
-  .fonctionnement {
-    margin-top: 1.875em;
-    margin-bottom: 1.875em;
-  }
-  .fonctionnement > * {
-    width: 90%;
-    margin: 5%;
-  }
-  .fonctionnement__list {
-    list-style-type: none;
-    list-style-position: inside;
-    padding: 0;
-  }
-  .fonctionnement__list--element {
-    background-color: #F6F6F6;
-    border-radius: 1.563em;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 4.688em;
-    width: 95%;
-    margin: 5%;
-    box-shadow: 0 0.313em 0.313em #C6C6C6;
-  }
-  .fonctionnement__list--element > * {
-    margin: 2%;
-  }
-  .fonctionnement__list--element:hover {
-    background-color: #F5EDFF;
-  }
-  .fonctionnement__list--element:hover .icon__fonctionnement {
-    fill: #9356DC;
-  }
-  .fonctionnement__list--puce {
-    background-color: #9356DC;
-    color: #FFF;
-    text-align: center;
-    vertical-align: center;
-    width: 1.5em;
-    height: 1.5em;
-    font-size: 0.81em;
-    border-radius: 100%;
-    margin-left: -0.81em;
-  }
-  .fonctionnement__list--text {
-    width: 80%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 2%;
-    font-family: "roboto_regular", Arial, sans-serif;
-    font-weight: bold;
-  }
-  .fonctionnement__list--text svg {
-    margin-right: 5%;
-  }
-
-  footer {
-    background-color: #353535;
-    color: #FFF;
-    padding: 5%;
-  }
-  footer ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  footer ul li {
-    margin-top: 2%;
-  }
+/*
+@media screen and (max-device-width:425px){
+ */
+body {
+  font-family: "robotoregular", arial, Helvetica, sans-serif;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 50px;
 }
+
+.svgSources {
+  display: none;
+}
+
+h1, h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+p {
+  font-family: "robotolight", Arial, sans-serif;
+  font-size: 0.81em;
+  color: #353535;
+}
+
+header {
+  background-color: #EAEAEA;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container--entete {
+  width: 100%;
+  background-color: #FFF;
+  height: auto;
+  box-shadow: 0 0.125em 0.313em #7E7E7E;
+}
+.container--notice {
+  background-color: #F6F6F6;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 5%;
+}
+.container--notice h1, .container--notice h2 {
+  width: 70%;
+}
+.container--notice p {
+  width: 80%;
+}
+
+.logo--debut {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 46%;
+  height: auto;
+  fill: #101010;
+}
+.logo--footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1.25em;
+  width: 6.188em;
+  height: 1.125em;
+  fill: #FFF;
+}
+
+.icon {
+  width: 0.9em;
+  height: 0.9em;
+}
+.icon__search {
+  fill: #000;
+}
+.icon__fonctionnement {
+  fill: #7E7E7E;
+  width: 1.5em;
+  height: 1.5em;
+}
+.icon__vignette--solid {
+  fill: #9356DC;
+}
+.icon__vignette--regular {
+  fill: #101010;
+}
+.icon__footer {
+  width: 0.813em;
+  height: 0.813em;
+  fill: #FFF;
+}
+
+.btn__formulaire {
+  width: 58%;
+  height: 3.125em;
+  border: none;
+  border-radius: 1.563em 1.563em 1.563em 1.563em;
+  background: linear-gradient(0.95turn, #9356DC, #FF79DA);
+  color: #FFF;
+  font-size: 0.688em;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5%;
+  box-shadow: 0 0.313em 0.313em #C6C6C6;
+}
+
+.lieu {
+  width: 40%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 1%;
+}
+
+#mapSearch {
+  font-size: 0.81em;
+  color: #000;
+  border: none;
+  background-color: transparent;
+  width: 80%;
+  height: 1.5em;
+  padding: 0;
+}
+
+::placeholder {
+  color: #000;
+}
+
+.fonctionnement {
+  margin-top: 1.875em;
+  margin-bottom: 1.875em;
+}
+.fonctionnement > * {
+  width: 90%;
+  margin: 5%;
+}
+.fonctionnement__list {
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+}
+.fonctionnement__list--element {
+  background-color: #F6F6F6;
+  border-radius: 1.563em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 4.688em;
+  width: 95%;
+  margin: 5%;
+  box-shadow: 0 0.313em 0.313em #C6C6C6;
+}
+.fonctionnement__list--element > * {
+  margin: 2%;
+}
+.fonctionnement__list--element:hover {
+  background-color: #F5EDFF;
+}
+.fonctionnement__list--element:hover .icon__fonctionnement {
+  fill: #9356DC;
+}
+.fonctionnement__list--puce {
+  background-color: #9356DC;
+  color: #FFF;
+  text-align: center;
+  vertical-align: center;
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 0.81em;
+  border-radius: 100%;
+  margin-left: -0.81em;
+}
+.fonctionnement__list--text {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2%;
+  font-family: "roboto_regular", Arial, sans-serif;
+  font-weight: bold;
+}
+.fonctionnement__list--text svg {
+  margin-right: 5%;
+}
+
+footer {
+  background-color: #353535;
+  color: #FFF;
+  padding: 5%;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer ul li {
+  margin-top: 2%;
+}
+
+/*    
+}*/
 
 /*# sourceMappingURL=style.css.map */
