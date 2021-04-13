@@ -1,3 +1,4 @@
+/*Fonts*/
 @font-face {
   font-family: "robotoregular";
   src: url("../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot");
@@ -12,6 +13,7 @@
   font-weight: lighter;
   font-style: normal;
 }
+/*Colors*/
 body {
   font-family: "robotoregular", arial, Helvetica, sans-serif;
   width: 100%;
@@ -19,7 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 50px;
+  font-size: 16px;
 }
 
 .svgSources {
@@ -27,7 +29,7 @@ body {
 }
 
 h1, h2 {
-  font-size: 1.2em;
+  font-size: 1.06em;
   font-weight: bold;
   margin: 0;
 }
@@ -36,6 +38,20 @@ p {
   font-family: "robotolight", Arial, sans-serif;
   font-size: 0.81em;
   color: #353535;
+}
+
+.logo--debut {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: auto;
+  height: 1.875em;
+  fill: #101010;
+}
+.logo--footer {
+  height: 1.125em;
+  width: 6.25em;
+  fill: #FFF;
 }
 
 header {
@@ -52,14 +68,13 @@ header {
 .container--entete {
   width: 100%;
   background-color: #FFF;
-  height: auto;
+  height: 3.93em;
   box-shadow: 0 0.125em 0.313em #7E7E7E;
   position: fixed;
 }
 .container--notice {
   background-color: #F6F6F6;
   height: auto;
-  justify-content: center;
   text-align: center;
   padding: 5%;
 }
@@ -70,34 +85,45 @@ header {
   width: 80%;
 }
 
-.logo--debut {
+.container--lieu {
+  box-sizing: border-box;
+  width: 50%;
+  height: 7.05em;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: flex-end;
   margin: auto;
-  width: 46%;
-  height: auto;
-  fill: #101010;
-}
-.logo--footer {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 1.25em;
-  width: 6.188em;
-  height: 1.125em;
-  fill: #FFF;
+  padding: 3%;
 }
 
-.icon {
-  width: 0.9em;
-  height: 0.9em;
+#mapSearch {
+  font-size: 0.92em;
+  color: #000;
+  border-color: transparent;
+  background-color: transparent;
+  width: 90%;
+  height: 1.5em;
+  margin-left: 2%;
 }
+
+::placeholder {
+  color: #000;
+}
+
 .icon__search {
+  width: 1em;
+  height: 1em;
   fill: #000;
 }
 .icon__fonctionnement {
   fill: #7E7E7E;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.25em;
+  height: 1.25em;
+}
+.icon__vignette {
+  width: 1.25em;
+  height: 1.25em;
 }
 .icon__vignette--solid {
   fill: #9356DC;
@@ -125,39 +151,22 @@ header {
   box-shadow: 0 0.313em 0.313em #C6C6C6;
 }
 
-.lieu {
-  width: 40%;
-  height: 220px;
+section {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-  margin: auto;
-  padding: 1%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  height: 100%;
 }
-
-#mapSearch {
-  font-size: 0.81em;
-  color: #000;
-  border: none;
-  background-color: transparent;
-  width: 80%;
-  height: 1.5em;
-  padding: 0;
-}
-
-::placeholder {
-  color: #000;
-}
-
-.fonctionnement {
-  margin-top: 1.875em;
-  margin-bottom: 1.875em;
-}
-.fonctionnement > * {
+section > * {
   width: 90%;
-  margin: 5%;
+  margin: 2%;
 }
+
 .fonctionnement__list {
   list-style-type: none;
   list-style-position: inside;
@@ -205,6 +214,70 @@ header {
 }
 .fonctionnement__list--text svg {
   margin-right: 5%;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+  height: 100%;
+}
+
+.vignette {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #FFF;
+  height: 15.625em;
+  border-radius: 0.6875em;
+  box-sizing: border-box;
+  box-shadow: 0 0.313em 0.313em #C6C6C6;
+}
+.vignette__image {
+  border-radius: 0.6875em 0.6875em 0em 0em;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+.vignette__info {
+  width: 100%;
+  height: 100%;
+  margin-top: -10em;
+  box-sizing: border-box;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.vignette__info--new {
+  box-sizing: border-box;
+  background-color: #99E2D0;
+  color: #018766;
+  font-weight: bold;
+  text-align: center;
+  font-size: 90%;
+  padding: 1%;
+  width: 22%;
+  height: 12%;
+}
+.vignette__info--text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 4em;
+}
+
+.noNew {
+  opacity: 0;
+}
+
+.resto__info--text {
+  width: 80%;
+}
+.resto__info--text > * {
+  width: 80%;
+  margin: 1%;
 }
 
 footer {
