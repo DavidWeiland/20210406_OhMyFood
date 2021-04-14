@@ -14,6 +14,82 @@
   font-style: normal;
 }
 /*Colors*/
+@keyframes heart {
+  0% {
+    fill-opacity: 0;
+  }
+  100% {
+    fill-opacity: 1;
+  }
+}
+@keyframes loadingPage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loadingPageInvert {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.spinner {
+  width: auto;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.spinner__icon--wait {
+  transform: rotate(2turn);
+  transition: transform 5000ms;
+  animation: loadingPageInvert 100ms 3900ms both;
+}
+
+.icon__wait {
+  width: 10em;
+  height: 10em;
+  fill: #9356DC;
+}
+.icon__wait--1 {
+  fill-opacity: 1;
+}
+.icon__wait--2 {
+  fill-opacity: 0.9;
+}
+.icon__wait--3 {
+  fill-opacity: 0.8;
+}
+.icon__wait--4 {
+  fill-opacity: 0.7;
+}
+.icon__wait--5 {
+  fill-opacity: 0.6;
+}
+.icon__wait--6 {
+  fill-opacity: 0.5;
+}
+.icon__wait--7 {
+  fill-opacity: 0.4;
+}
+.icon__wait--8 {
+  fill-opacity: 0.3;
+}
+.icon__utensils {
+  width: 2em;
+  height: 2em;
+  fill: #FF79DA;
+}
+
 body {
   font-family: "robotoregular", arial, Helvetica, sans-serif;
   width: 100%;
@@ -40,6 +116,15 @@ p {
   color: #353535;
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  border: 0;
+}
+
 .logo--debut {
   display: flex;
   justify-content: center;
@@ -57,6 +142,11 @@ p {
 header {
   background-color: #EAEAEA;
   height: auto;
+  animation: loadingPage 100ms 3900ms both;
+}
+
+main {
+  animation: loadingPage 100ms 4000ms both;
 }
 
 .container {
@@ -70,7 +160,6 @@ header {
   background-color: #FFF;
   height: 3.93em;
   box-shadow: 0 0.125em 0.313em #7E7E7E;
-  position: fixed;
 }
 .container--notice {
   background-color: #F6F6F6;
@@ -88,7 +177,7 @@ header {
 .container--lieu {
   box-sizing: border-box;
   width: 50%;
-  height: 7.05em;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -124,12 +213,22 @@ header {
 .icon__vignette {
   width: 1.25em;
   height: 1.25em;
+  margin: 0;
 }
 .icon__vignette--solid {
   fill: #9356DC;
+  margin: 0;
+  position: relative;
+  right: 0.6em;
+  cursor: pointer;
+  fill-opacity: 0;
 }
 .icon__vignette--regular {
   fill: #101010;
+  margin: 0;
+  position: relative;
+  right: -0.6em;
+  cursor: pointer;
 }
 .icon__footer {
   width: 0.813em;
@@ -137,10 +236,21 @@ header {
   fill: #FFF;
 }
 
+.resto__info--svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5em;
+  height: 5em;
+  background-color: transparent;
+}
+.resto__info--svg:active .icon__vignette--solid {
+  animation: heart 1000ms;
+}
+
 .btn__formulaire {
   width: 58%;
   height: 3.125em;
-  border: none;
   border-radius: 1.563em 1.563em 1.563em 1.563em;
   background: linear-gradient(0.95turn, #9356DC, #FF79DA);
   color: #FFF;
@@ -149,6 +259,10 @@ header {
   cursor: pointer;
   margin: 5%;
   box-shadow: 0 0.313em 0.313em #C6C6C6;
+}
+.btn__formulaire:active {
+  border-left: 3px grey solid;
+  border-top: 3px grey solid;
 }
 
 section {
@@ -227,21 +341,40 @@ section > * {
   flex-direction: column;
   justify-content: flex-start;
   background-color: #FFF;
-  height: 15.625em;
+  height: 19em;
   border-radius: 0.6875em;
   box-sizing: border-box;
   box-shadow: 0 0.313em 0.313em #C6C6C6;
 }
+.vignette a {
+  width: 100%;
+  height: 75%;
+}
 .vignette__image {
   border-radius: 0.6875em 0.6875em 0em 0em;
   width: 100%;
-  height: 70%;
+  height: 100%;
+  object-position: 50% 60%;
   object-fit: cover;
+  cursor: pointer;
+}
+.vignette__new {
+  box-sizing: border-box;
+  background-color: #99E2D0;
+  color: #018766;
+  font-weight: bold;
+  text-align: center;
+  font-size: 100%;
+  padding: 1%;
+  width: 22%;
+  height: 12%;
+  position: relative;
+  bottom: 100%;
+  left: 75%;
 }
 .vignette__info {
   width: 100%;
-  height: 100%;
-  margin-top: -10em;
+  height: 25%;
   box-sizing: border-box;
   padding: 2%;
   display: flex;
@@ -249,21 +382,11 @@ section > * {
   justify-content: space-between;
   align-items: flex-end;
 }
-.vignette__info--new {
-  box-sizing: border-box;
-  background-color: #99E2D0;
-  color: #018766;
-  font-weight: bold;
-  text-align: center;
-  font-size: 90%;
-  padding: 1%;
-  width: 22%;
-  height: 12%;
-}
 .vignette__info--text {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 4em;
 }
@@ -281,6 +404,7 @@ section > * {
 }
 
 footer {
+  animation: loadingPage 1s 4s both;
   background-color: #353535;
   color: #FFF;
   padding: 5%;

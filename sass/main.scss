@@ -38,7 +38,87 @@ $font-color-mid-light: #C6C6C6;
 $font-color-mid-dark:#7E7E7E;
 $font-color-dark:#101010;
 $font-color-green:#018766;
- 
+
+@keyframes heart{
+    0% {
+        fill-opacity: 0;
+    }
+    100%{
+        fill-opacity: 1;
+    }
+}
+
+@keyframes loadingPage {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes loadingPageInvert {
+    0% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.spinner{
+    width: auto;
+    height: auto;
+    margin:auto;
+    position:absolute;
+    top:30%;
+    left:30%;
+    display:flex;
+    justify-content: center;
+}
+.spinner__icon{
+    &--wait{
+        transform: rotate(2turn);
+        transition: transform 5000ms;
+        animation: loadingPageInvert 100ms 3900ms both;
+    }
+}
+.icon{
+    &__wait{
+        width: 10em;
+        height: 10em;
+        fill:$primary-color;
+        &--1{
+            fill-opacity: 1;
+        }
+        &--2{
+            fill-opacity: 0.9;
+        }
+        &--3{
+            fill-opacity: 0.8;
+        }
+        &--4{
+            fill-opacity: 0.7;
+        }
+        &--5{
+            fill-opacity: 0.6;
+        }
+        &--6{
+            fill-opacity: 0.5;
+        }
+        &--7{
+            fill-opacity: 0.4;
+        }
+        &--8{
+            fill-opacity: 0.3;
+        }
+    }
+    &__utensils{
+        width: 2em;
+        height: 2em;
+        fill:$secondary-color;
+    }
+}
+
 body{
     font-family:'robotoregular', arial, Helvetica, sans-serif;
     width: 100%;
@@ -66,6 +146,14 @@ p{
 h2{
     @extend h1;
 }
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button{
+    border:0;
+}
 
 .logo{
     &--debut{
@@ -87,6 +175,10 @@ h2{
 header{
     background-color: $bg-base;
     height: auto;
+    animation: loadingPage 100ms 3900ms both;
+}
+main{
+    animation: loadingPage 100ms 4000ms both;
 }
 
 .container{
@@ -99,9 +191,7 @@ header{
         background-color: $bg-primary-color;
         height: 3.93em;
         box-shadow:0 0.125em 0.313em $font-color-mid-dark;
-        position: fixed;
     }
-
     &--notice{
         background-color: $bg-secondary-color;
         height: auto;
@@ -119,7 +209,7 @@ header{
 .container--lieu{
     box-sizing: border-box;
     width: 50%;
-    height:7.05em;
+    height:auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -155,11 +245,21 @@ header{
     &__vignette{
         width: 1.25em;
         height: 1.25em;
+        margin:0;
         &--solid{
             fill:$primary-color;
+            margin: 0;
+            position: relative;
+            right: 0.6em;
+            cursor: pointer;
+            fill-opacity: 0;
         }
         &--regular{
             fill:$font-color-dark;
+            margin: 0;
+            position:relative;
+            right: -0.6em;
+            cursor: pointer;
         }
     }
     &__footer{
@@ -169,11 +269,23 @@ header{
     }
 }
 
+
+.resto__info--svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5em;
+    height: 5em;
+    background-color:transparent;
+    &:active .icon__vignette--solid{
+        animation: heart 1000ms;
+    }
+}
+
 .btn{
     &__formulaire{
         width: 58%;
         height: 3.125em;
-        border: none;
         border-radius: 1.563em 1.563em 1.563em 1.563em;
         background: linear-gradient(0.95turn, $primary-color, $secondary-color);
         color: $font-color-light;
@@ -182,6 +294,10 @@ header{
         cursor: pointer;
         margin:5%;
         box-shadow: 0 0.313em 0.313em $font-color-mid-light;
+        &:active{
+            border-left: 3px grey solid;
+            border-top : 3px grey solid;
+        }
     }
 }
 
@@ -262,41 +378,50 @@ section{
     flex-direction: column;
     justify-content: flex-start;
     background-color: $bg-primary-color;
-    height: 15.625em;
+    height: 19em;
     border-radius: 0.6875em ;
     box-sizing: border-box;
     box-shadow: 0 0.313em 0.313em $font-color-mid-light;
+    a{
+        width: 100%;
+        height: 75%;
+    }
     &__image{
         border-radius: 0.6875em  0.6875em  0em  0em ;
         width: 100%;
-        height: 70%;
+        height: 100%;
+        object-position: 50% 60%;
         object-fit: cover;
+        cursor: pointer;
+    }
+    &__new{
+        box-sizing: border-box;
+        background-color: $tertiary-color;
+        color: $font-color-green;
+        font-weight: bold;
+        text-align: center;
+        font-size: 100%;
+        padding:1%;
+        width: 22%;
+        height: 12%;
+        position:relative;
+        bottom: 100%;
+        left: 75%;
     }
     &__info{
         width: 100%;
-        height: 100%;
-        margin-top:-10em;
+        height: 25%;
         box-sizing: border-box;
         padding:2%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
-        &--new{
-            box-sizing: border-box;
-            background-color: $tertiary-color;
-            color: $font-color-green;
-            font-weight: bold;
-            text-align: center;
-            font-size: 90%;
-            padding:1%;
-            width: 22%;
-            height: 12%;
-        }
         &--text{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
             width: 100%;
             height: 4em;
         }
@@ -314,6 +439,7 @@ section{
 }
 
 footer{
+    animation: loadingPage 1s 4s both;
     background-color: $bg-tertiary-color;
     color:$font-color-light;
     padding:5%;
