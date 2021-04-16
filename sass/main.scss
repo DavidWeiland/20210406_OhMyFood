@@ -66,26 +66,26 @@ $font-color-green:#018766;
     }
 }
 .spinner{
-    width: auto;
+    width: 20%;
     height: auto;
     margin:auto;
     position:absolute;
     top:30%;
-    left:30%;
+    left:40%;
     display:flex;
     justify-content: center;
 }
 .spinner__icon{
     &--wait{
-        transform: rotate(2turn);
-        transition: transform 5000ms;
+        transform: rotate(1.5turn);
+        transition: transform 5000ms ease-out;
         animation: loadingPageInvert 100ms 3900ms both;
     }
 }
 .icon{
     &__wait{
-        width: 10em;
-        height: 10em;
+        width: 100%;
+        height: 100%;
         fill:$primary-color;
         &--1{
             fill-opacity: 1;
@@ -112,11 +112,6 @@ $font-color-green:#018766;
             fill-opacity: 0.3;
         }
     }
-    &__utensils{
-        width: 2em;
-        height: 2em;
-        fill:$secondary-color;
-    }
 }
 
 body{
@@ -127,6 +122,7 @@ body{
     flex-direction: column;
     justify-content: center;
     font-size:16px;
+    background-color: $bg-base;
 }
 .svgSources{
     display: none;
@@ -268,7 +264,6 @@ main{
         fill:$font-color-light;
     }
 }
-
 
 .resto__info--svg{
     display: flex;

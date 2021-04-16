@@ -39,25 +39,25 @@
   }
 }
 .spinner {
-  width: auto;
+  width: 20%;
   height: auto;
   margin: auto;
   position: absolute;
   top: 30%;
-  left: 30%;
+  left: 40%;
   display: flex;
   justify-content: center;
 }
 
 .spinner__icon--wait {
-  transform: rotate(2turn);
-  transition: transform 5000ms;
+  transform: rotate(1.5turn);
+  transition: transform 5000ms ease-out;
   animation: loadingPageInvert 100ms 3900ms both;
 }
 
 .icon__wait {
-  width: 10em;
-  height: 10em;
+  width: 100%;
+  height: 100%;
   fill: #9356DC;
 }
 .icon__wait--1 {
@@ -84,11 +84,6 @@
 .icon__wait--8 {
   fill-opacity: 0.3;
 }
-.icon__utensils {
-  width: 2em;
-  height: 2em;
-  fill: #FF79DA;
-}
 
 body {
   font-family: "robotoregular", arial, Helvetica, sans-serif;
@@ -98,6 +93,7 @@ body {
   flex-direction: column;
   justify-content: center;
   font-size: 16px;
+  background-color: #EAEAEA;
 }
 
 .svgSources {
