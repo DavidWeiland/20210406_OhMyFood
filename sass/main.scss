@@ -23,6 +23,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'shrikhand';
+    src: url('../fonts/shrikhand/Shrikhand-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*Colors*/
 $primary-color: #9356DC;
 $primary-color-light: #F5EDFF;
@@ -129,18 +136,22 @@ body{
 }
 
 h1{
-    font-size:1.06em;
+    font-size:2em;
     font-weight: bold;
     margin:0;
 }
 
 p{
     font-family:'robotolight', Arial, sans-serif;
-    font-size:0.81em;
+    font-size:1.4em;
     color:$bg-tertiary-color;
 }
 h2{
     @extend h1;
+}
+h3{
+    @extend h1;
+    font-size: 1.5em;
 }
 a{
     text-decoration: none;
@@ -157,24 +168,24 @@ button{
         justify-content: center;
         margin: auto;
         width: auto;
-        height: 1.875em;
+        height: 50%;
         fill:$font-color-dark;
     }
     &--footer{
-        height: 1.125em;
-        width: 6.25em;
+        padding:unset;
+        height: 2em;
+        width: 8em;
         fill:$font-color-light;
     }
 }
-
-
+/*
+.page__index{
+    animation: loadingPage 100ms 3900ms both;
+}
+*/
 header{
     background-color: $bg-base;
     height: auto;
-    animation: loadingPage 100ms 3900ms both;
-}
-main{
-    animation: loadingPage 100ms 4000ms both;
 }
 
 .container{
@@ -185,19 +196,16 @@ main{
     &--entete{
         width: 100%;
         background-color: $bg-primary-color;
-        height: 3.93em;
+        height: 5em;
         box-shadow:0 0.125em 0.313em $font-color-mid-dark;
     }
     &--notice{
         background-color: $bg-secondary-color;
         height: auto;
         text-align: center;
-        padding: 5%;
+        padding: 10%;
         h1{
-            width: 70%;
-        }
-        p {
-            width: 80%;
+            width: 90%;
         }
     }
 }
@@ -214,12 +222,12 @@ main{
     padding:3%;
 }
 #mapSearch{
-    font-size: 0.92em;
+    font-size: 1.3em;
     color:$font-color-base;
     border-color: transparent;
     background-color:transparent;
     width: 90%;
-    height: 1.5em;
+    height: auto;
     margin-left: 2%;
 }
 
@@ -229,8 +237,8 @@ main{
 
 .icon{
     &__search{
-        width: 1em;
-        height: 1em;
+        width: 1.5em;
+        height: 1.5em;
         fill:$font-color-base;
     }
     &__fonctionnement{
@@ -239,14 +247,15 @@ main{
         height: 1.25em;
     }
     &__vignette{
-        width: 1.25em;
-        height: 1.25em;
-        margin:0;
+        width: 2em;
+        height: 2em;
+        padding-top:1em;
+        align-self: flex-start;
         &--solid{
             fill:$primary-color;
             margin: 0;
             position: relative;
-            right: 0.6em;
+            right: 1em;
             cursor: pointer;
             fill-opacity: 0;
         }
@@ -254,13 +263,14 @@ main{
             fill:$font-color-dark;
             margin: 0;
             position:relative;
-            right: -0.6em;
+            right: -1em;
             cursor: pointer;
         }
     }
     &__footer{
-        width: 0.813em;
-        height: 0.813em;
+        width: 0.8em;
+        height: 0.8em;
+        padding-right: 0.5em;
         fill:$font-color-light;
     }
 }
@@ -279,13 +289,12 @@ main{
 
 .btn{
     &__formulaire{
-        width: 58%;
-        height: 3.125em;
+        width: 70%;
+        height: 3.1em;
         border-radius: 1.563em 1.563em 1.563em 1.563em;
-        background: linear-gradient(0.95turn, $primary-color, $secondary-color);
+        background: linear-gradient(0.98turn, $primary-color, $secondary-color);
         color: $font-color-light;
-        font-size: 0.688em;
-        font-weight: bold;
+        font-size: 1.2em;
         cursor: pointer;
         margin:5%;
         box-shadow: 0 0.313em 0.313em $font-color-mid-light;
@@ -293,6 +302,10 @@ main{
             border-left: 3px grey solid;
             border-top : 3px grey solid;
         }
+        &--menu{
+            width: 50%;
+        }
+
     }
 }
 
@@ -302,9 +315,9 @@ section{
     justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
-    margin-top: 2%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    margin:initial;
+    padding-top: 10%;
+    padding-bottom: 10%;
     height: 100%;
     & > *{
         width: 90%;
@@ -313,6 +326,7 @@ section{
 }
 
 .fonctionnement{
+    background-color: $bg-primary-color;
     &__list{
         list-style-type:none;
         list-style-position: inside;
@@ -323,9 +337,9 @@ section{
             display: flex;
             justify-content:flex-start;
             align-items: center;
-            height: 4.688em;
+            height: 6em;
             width: 95%;
-            margin:5%;
+            margin:6%;
             box-shadow: 0 0.313em 0.313em $font-color-mid-light;
             > *{
                 margin:2%;
@@ -338,13 +352,15 @@ section{
             }
         }
         &--puce{
+            box-sizing: border-box;
             background-color: $primary-color;
             color:$font-color-light;
             text-align: center;
             vertical-align: center;
-            width: 1.5em;
-            height: 1.5em;
-            font-size: 0.81em;
+            padding:1%;
+            width: 2em;
+            height: 2em;
+            font-size: 1.1em;
             border-radius:100%;
             margin-left: -0.81em;
         }
@@ -367,19 +383,20 @@ section{
     background-color: $bg-secondary-color;
     height: 100%;
 }
+
 .vignette{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     background-color: $bg-primary-color;
-    height: 19em;
+    height: 21em;
     border-radius: 0.6875em ;
     box-sizing: border-box;
     box-shadow: 0 0.313em 0.313em $font-color-mid-light;
     a{
         width: 100%;
-        height: 75%;
+        height: 68%;
     }
     &__image{
         border-radius: 0.6875em  0.6875em  0em  0em ;
@@ -395,19 +412,19 @@ section{
         color: $font-color-green;
         font-weight: bold;
         text-align: center;
-        font-size: 100%;
-        padding:1%;
+        font-size: 1.2em;
+        padding: 1%;
         width: 22%;
-        height: 12%;
+        height: 15%;
         position:relative;
         bottom: 100%;
         left: 75%;
+        border-radius: 0.1em;
     }
     &__info{
         width: 100%;
-        height: 25%;
+        height: 32%;
         box-sizing: border-box;
-        padding:2%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -416,9 +433,10 @@ section{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            height: 4em;
+            align-items: flex-start;
+            width: 95%;
+            height: 100%;
+            margin:2%;
         }
     }
 }
@@ -434,15 +452,121 @@ section{
 }
 
 footer{
-    animation: loadingPage 1s 4s both;
     background-color: $bg-tertiary-color;
     color:$font-color-light;
     padding:5%;
     & ul{
         list-style-type: none;
         padding:0;
+        font-size: 1.3em;
         & li{
             margin-top:2%;
         }
+    }
+}
+
+.menu__image{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+
+.restaurant{
+    @extend .restaurants;
+    margin-top : -3em;
+    border-radius: 3.5em 3.5em 0 0;
+    padding-top: 1em;
+}
+
+.restaurant h1{
+    font-family: 'shrikhand', Arial, Helvetica, sans-serif;
+    font-size: 2.2em;
+    margin-top: 1em;
+}
+h4{
+    font-family: 'robotolight', Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: normal;
+    width: 12%;
+    border-bottom: 0.2em solid $tertiary-color;
+}
+.platUl{
+    list-style: none;
+    padding:0;
+}
+.plat{
+    background-color: $bg-primary-color;
+    @extend .fonctionnement__list--element;
+    justify-content: space-between;
+    margin:0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+}
+.plat__precis{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    margin:initial;
+    padding:1%;
+    &--nom{
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    width:100%;
+    height: auto;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    &--ingredients{
+    font-family: 'robotolight', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 1.1em;
+    width: 100%;
+    height:auto;
+    padding:0;
+    margin:0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    &--prix{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        font-family: 'roboto', Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        width: 30%;
+        height: 100%;
+        margin: initial;
+        text-align: center;
+        padding:5%;
+    }
+    &--select{
+        background-color: $tertiary-color;
+        color:$font-color-light;
+        border-radius: 0 1.563em 1.563em 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        font-family: 'roboto', Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        width: 6em;
+        height: 100%;
+        margin: initial;
+        text-align: center;
+        padding:5%;
+
     }
 }
