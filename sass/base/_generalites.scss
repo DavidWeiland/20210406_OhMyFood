@@ -1,0 +1,53 @@
+body{
+    font-family:'robotoregular', arial, Helvetica, sans-serif;
+    width: 100%;
+    max-width: 1000px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size:16px;
+    background-color: $bg-base;
+}
+
+h1{
+    font-size:2em;
+    font-weight: bold;
+    margin:0;
+}
+
+.restaurant h1{
+    font-family: 'shrikhand', Arial, Helvetica, sans-serif;
+    font-size: 2.2em;
+    margin-top: 1em;
+}
+
+h2{
+    @extend h1;
+}
+
+.restaurant h2{
+    font-family: 'robotolight', Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: normal;
+    width: 2.5em;
+    padding-top:0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 0.2em solid $tertiary-color;
+}
+
+h3{
+    @extend h1;
+    font-size: 1.5em;
+}
+
+p{
+    font-family:'robotolight', Arial, sans-serif;
+    font-size:1.4em;
+    color:$bg-tertiary-color;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}

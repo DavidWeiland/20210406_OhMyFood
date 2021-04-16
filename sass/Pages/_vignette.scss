@@ -1,0 +1,68 @@
+.vignette{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: $bg-primary-color;
+    height: 21em;
+    border-radius: 0.6875em ;
+    box-sizing: border-box;
+    box-shadow: 0 0.313em 0.313em $font-color-mid-light;
+    a{
+        width: 100%;
+        height: 68%;
+    }
+    &__image{
+        border-radius: 0.6875em  0.6875em  0em  0em ;
+        width: 100%;
+        height: 100%;
+        object-position: 50% 60%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    &__new{
+        box-sizing: border-box;
+        background-color: $tertiary-color;
+        color: $font-color-green;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.2em;
+        padding: 1%;
+        width: 22%;
+        height: 15%;
+        position:relative;
+        bottom: 100%;
+        left: 75%;
+        border-radius: 0.1em;
+    }
+    &__info{
+        width: 100%;
+        height: 32%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        &--text{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 95%;
+            height: 100%;
+            margin:2%;
+        }
+    }
+}
+
+.noNew{
+    opacity: 0;
+}
+
+.resto__info--text{
+    width: 80%;
+    & > *{
+        width: 80%;
+        margin:1%;
+    }
+}

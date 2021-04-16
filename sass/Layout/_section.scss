@@ -1,0 +1,15 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    margin:initial;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    height: 100%;
+    & > *{
+        width: 90%;
+        margin: 2%;
+    }
+}

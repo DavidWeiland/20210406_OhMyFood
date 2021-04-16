@@ -1,0 +1,16 @@
+.logo{
+    &--debut{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: auto;
+        height: 50%;
+        fill:$font-color-dark;
+    }
+    &--footer{
+        padding:unset;
+        height: 2em;
+        width: 8em;
+        fill:$font-color-light;
+    }
+}

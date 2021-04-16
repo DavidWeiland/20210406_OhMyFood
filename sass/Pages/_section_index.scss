@@ -1,0 +1,58 @@
+.fonctionnement{
+    background-color: $bg-primary-color;
+    &__list{
+        list-style-type:none;
+        list-style-position: inside;
+        padding:0;
+        &--element{
+            background-color: $bg-secondary-color;
+            border-radius: 1.563em;
+            display: flex;
+            justify-content:flex-start;
+            align-items: center;
+            height: 6em;
+            width: 95%;
+            margin:6%;
+            box-shadow: 0 0.313em 0.313em $font-color-mid-light;
+            > *{
+                margin:2%;
+            }
+            &:hover{
+                background-color: $primary-color-light;
+                .icon__fonctionnement{
+                    fill:$primary-color;
+                }
+            }
+        }
+        &--puce{
+            box-sizing: border-box;
+            background-color: $primary-color;
+            color:$font-color-light;
+            text-align: center;
+            vertical-align: center;
+            padding:1%;
+            width: 2em;
+            height: 2em;
+            font-size: 1.1em;
+            border-radius:100%;
+            margin-left: -0.81em;
+        }
+        &--text{
+            width: 80%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding:2%;
+            font-family: 'roboto_regular', Arial, sans-serif;
+            font-weight: bold;
+            svg {
+                margin-right:5%;
+            }
+        }
+    }
+}
+
+.restaurants{
+    background-color: $bg-secondary-color;
+    height: 100%;
+}

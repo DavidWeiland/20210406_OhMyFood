@@ -1,498 +1,37 @@
-/*Fonts*/
-@font-face {
-    font-family: 'robotoregular';
-    src: url('../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot');
-    src: url('../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff2') format('woff2'),
-         url('../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
-         url('../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
-         url('../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+/*Utils*/
+@import "./Utils/variables_colors";
+@import "./Utils/keyframes";
 
-@font-face {
-    font-family: 'robotolight';
-    src: url('../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.eot');
-    src: url('../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.woff2') format('woff2'),
-         url('../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.woff') format('woff'),
-         url('../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.ttf') format('truetype'),
-         url('../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.svg#robotolight') format('svg');
-    font-weight:lighter;
-    font-style: normal;
-}
+/*Vendors*/
 
-@font-face {
-    font-family: 'shrikhand';
-    src: url('../fonts/shrikhand/Shrikhand-Regular.otf');
-    font-weight: normal;
-    font-style: normal;
-}
+/*base*/
+@import "./base/fonts";
+@import "./base/icons";
+@import "./base/generalites";
 
-/*Colors*/
-$primary-color: #9356DC;
-$primary-color-light: #F5EDFF;
-$secondary-color:#FF79DA;
-$tertiary-color:#99E2D0;
-$bg-base:#EAEAEA;
-$bg-primary-color:#FFF;
-$bg-secondary-color:#F6F6F6;
-$bg-tertiary-color:#353535;
-$font-color-base:#000;
-$font-color-light:#FFF;
-$font-color-mid-light: #C6C6C6;
-$font-color-mid-dark:#7E7E7E;
-$font-color-dark:#101010;
-$font-color-green:#018766;
 
-@keyframes heart{
-    0% {
-        fill-opacity: 0;
-    }
-    100%{
-        fill-opacity: 1;
-    }
-}
+/*composants*/
+@import "./Composants/bouton";
 
-@keyframes loadingPage {
-    0% {
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
+/*layout*/
+@import "./Layout/header";
+@import "./Layout/logo";
+@import "./Layout/section";
+@import "./Layout/footer";
 
-@keyframes loadingPageInvert {
-    0% {
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-.spinner{
-    width: 20%;
-    height: auto;
-    margin:auto;
-    position:absolute;
-    top:30%;
-    left:40%;
-    display:flex;
-    justify-content: center;
-}
-.spinner__icon{
-    &--wait{
-        transform: rotate(1.5turn);
-        transition: transform 5000ms ease-out;
-        animation: loadingPageInvert 100ms 3900ms both;
-    }
-}
-.icon{
-    &__wait{
-        width: 100%;
-        height: 100%;
-        fill:$primary-color;
-        &--1{
-            fill-opacity: 1;
-        }
-        &--2{
-            fill-opacity: 0.9;
-        }
-        &--3{
-            fill-opacity: 0.8;
-        }
-        &--4{
-            fill-opacity: 0.7;
-        }
-        &--5{
-            fill-opacity: 0.6;
-        }
-        &--6{
-            fill-opacity: 0.5;
-        }
-        &--7{
-            fill-opacity: 0.4;
-        }
-        &--8{
-            fill-opacity: 0.3;
-        }
-    }
-}
+/*pages*/
+@import "./Pages/header_index";
+@import "./Pages/spinner";
+@import "./Pages/bouton_index";
+@import "./Pages/section_index";
+@import "./Pages/vignette";
+@import "./Pages/header_menu";
+@import "./Pages/section_menu";
+@import "./Pages/bouton_menu";
+/*themes*/
 
-body{
-    font-family:'robotoregular', arial, Helvetica, sans-serif;
-    width: 100%;
-    max-width: 1000px;
-    margin:auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size:16px;
-    background-color: $bg-base;
-}
-.svgSources{
-    display: none;
-}
 
-h1{
-    font-size:2em;
-    font-weight: bold;
-    margin:0;
-}
-
-p{
-    font-family:'robotolight', Arial, sans-serif;
-    font-size:1.4em;
-    color:$bg-tertiary-color;
-}
-h2{
-    @extend h1;
-}
-h3{
-    @extend h1;
-    font-size: 1.5em;
-}
-a{
-    text-decoration: none;
-    cursor: pointer;
-}
-
-button{
-    border:0;
-}
-
-.logo{
-    &--debut{
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        width: auto;
-        height: 50%;
-        fill:$font-color-dark;
-    }
-    &--footer{
-        padding:unset;
-        height: 2em;
-        width: 8em;
-        fill:$font-color-light;
-    }
-}
-
-.page__index{
-    animation: loadingPage 100ms 3900ms both;
-}
-
-header{
-    background-color: $bg-base;
-    height: auto;
-}
-
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    &--entete{
-        width: 100%;
-        background-color: $bg-primary-color;
-        height: 5em;
-        box-shadow:0 0.125em 0.313em $font-color-mid-dark;
-    }
-    &--notice{
-        background-color: $bg-secondary-color;
-        height: auto;
-        text-align: center;
-        padding: 10%;
-        h1{
-            width: 90%;
-        }
-    }
-}
-
-.container--lieu{
-    box-sizing: border-box;
-    width: 50%;
-    height:auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    margin: auto;
-    padding:3%;
-}
-#mapSearch{
-    font-size: 1.3em;
-    color:$font-color-base;
-    border-color: transparent;
-    background-color:transparent;
-    width: 90%;
-    height: auto;
-    margin-left: 2%;
-}
-
-::placeholder{
-    color:$font-color-base;
-}
-
-.icon{
-    &__search{
-        width: 1.5em;
-        height: 1.5em;
-        fill:$font-color-base;
-    }
-    &__fonctionnement{
-        fill:$font-color-mid-dark;
-        width: 1.25em;
-        height: 1.25em;
-    }
-    &__vignette{
-        width: 2em;
-        height: 2em;
-        padding-top:1em;
-        align-self: flex-start;
-        &--solid{
-            fill:$primary-color;
-            margin: 0;
-            position: relative;
-            right: 1em;
-            cursor: pointer;
-            fill-opacity: 0;
-        }
-        &--regular{
-            fill:$font-color-dark;
-            margin: 0;
-            position:relative;
-            right: -1em;
-            cursor: pointer;
-        }
-    }
-    &__footer{
-        width: 0.8em;
-        height: 0.8em;
-        padding-right: 0.5em;
-        fill:$font-color-light;
-    }
-}
-
-.resto__info--svg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 5em;
-    height: 5em;
-    background-color:transparent;
-    &:active .icon__vignette--solid{
-        animation: heart 1000ms;
-    }
-}
-
-.btn{
-    &__formulaire{
-        width: 70%;
-        height: 3.1em;
-        border-radius: 1.563em 1.563em 1.563em 1.563em;
-        background: linear-gradient(0.98turn, $primary-color, $secondary-color);
-        color: $font-color-light;
-        font-size: 1.2em;
-        cursor: pointer;
-        margin:5%;
-        box-shadow: 0 0.313em 0.313em $font-color-mid-light;
-        &:active{
-            border-left: 3px grey solid;
-            border-top : 3px grey solid;
-        }
-        &--menu{
-            width: 50%;
-        }
-
-    }
-}
-
-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    box-sizing: border-box;
-    margin:initial;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    height: 100%;
-    & > *{
-        width: 90%;
-        margin: 2%;
-    }
-}
-
-.fonctionnement{
-    background-color: $bg-primary-color;
-    &__list{
-        list-style-type:none;
-        list-style-position: inside;
-        padding:0;
-        &--element{
-            background-color: $bg-secondary-color;
-            border-radius: 1.563em;
-            display: flex;
-            justify-content:flex-start;
-            align-items: center;
-            height: 6em;
-            width: 95%;
-            margin:6%;
-            box-shadow: 0 0.313em 0.313em $font-color-mid-light;
-            > *{
-                margin:2%;
-            }
-            &:hover{
-                background-color: $primary-color-light;
-                .icon__fonctionnement{
-                    fill:$primary-color;
-                }
-            }
-        }
-        &--puce{
-            box-sizing: border-box;
-            background-color: $primary-color;
-            color:$font-color-light;
-            text-align: center;
-            vertical-align: center;
-            padding:1%;
-            width: 2em;
-            height: 2em;
-            font-size: 1.1em;
-            border-radius:100%;
-            margin-left: -0.81em;
-        }
-        &--text{
-            width: 80%;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            padding:2%;
-            font-family: 'roboto_regular', Arial, sans-serif;
-            font-weight: bold;
-            svg {
-                margin-right:5%;
-            }
-        }
-    }
-    
-}
-.restaurants{
-    background-color: $bg-secondary-color;
-    height: 100%;
-}
-
-.vignette{
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: $bg-primary-color;
-    height: 21em;
-    border-radius: 0.6875em ;
-    box-sizing: border-box;
-    box-shadow: 0 0.313em 0.313em $font-color-mid-light;
-    a{
-        width: 100%;
-        height: 68%;
-    }
-    &__image{
-        border-radius: 0.6875em  0.6875em  0em  0em ;
-        width: 100%;
-        height: 100%;
-        object-position: 50% 60%;
-        object-fit: cover;
-        cursor: pointer;
-    }
-    &__new{
-        box-sizing: border-box;
-        background-color: $tertiary-color;
-        color: $font-color-green;
-        font-weight: bold;
-        text-align: center;
-        font-size: 1.2em;
-        padding: 1%;
-        width: 22%;
-        height: 15%;
-        position:relative;
-        bottom: 100%;
-        left: 75%;
-        border-radius: 0.1em;
-    }
-    &__info{
-        width: 100%;
-        height: 32%;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-        &--text{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-            width: 95%;
-            height: 100%;
-            margin:2%;
-        }
-    }
-}
-.noNew{
-    opacity: 0;
-}
-.resto__info--text{
-    width: 80%;
-    & > *{
-        width: 80%;
-        margin:1%;
-    }
-}
-
-footer{
-    background-color: $bg-tertiary-color;
-    color:$font-color-light;
-    padding:5%;
-    & ul{
-        list-style-type: none;
-        padding:0;
-        font-size: 1.3em;
-        & li{
-            margin-top:2%;
-        }
-    }
-}
-
-.menu__image{
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    object-fit: cover;
-}
-
-.restaurant{
-    @extend .restaurants;
-    margin-top : -3em;
-    border-radius: 3.5em 3.5em 0 0;
-    padding-top: 1em;
-}
-
-.restaurant h1{
-    font-family: 'shrikhand', Arial, Helvetica, sans-serif;
-    font-size: 2.2em;
-    margin-top: 1em;
-}
-h4{
-    font-family: 'robotolight', Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
-    font-weight: normal;
-    width: 12%;
-    border-bottom: 0.2em solid $tertiary-color;
-}
-.platUl{
+.menu__choix{
     list-style: none;
     padding:0;
 }
@@ -504,9 +43,23 @@ h4{
     margin-top: 2%;
     margin-bottom: 2%;
     width: 100%;
+    &:hover{
+        background-color: $bg-primary-color;
+        .plat__precis{
+            width: 80%;
+        }
+        .plat__precis--prix{
+            width: 30%;
+            transform: translateX(0);
+            }
+        .plat__precis--select{
+            opacity: 1;
+        transform: translateX(0);
+        }
+    }
 }
 .plat__precis{
-    width: 80%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -543,20 +96,22 @@ h4{
         align-items: flex-end;
         justify-content: flex-end;
         box-sizing: border-box;
+        border-radius: 0 1.563em 1.563em 0;
         font-family: 'roboto', Arial, Helvetica, sans-serif;
         font-size: 1em;
         font-weight: bold;
-        width: 30%;
+        width: 10%;
         height: 100%;
         margin: initial;
         text-align: center;
         padding:5%;
+        transform: translateX(5em);
+        animation: transform 400ms ease-in-out;
     }
     &--select{
         background-color: $tertiary-color;
         color:$font-color-light;
         border-radius: 0 1.563em 1.563em 0;
-        display: flex;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
@@ -568,6 +123,9 @@ h4{
         margin: initial;
         text-align: center;
         padding:5%;
+        opacity:0;
+        transform: translateX(5em);
+        
 
     }
 }
