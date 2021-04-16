@@ -124,6 +124,7 @@ $font-color-green:#018766;
 body{
     font-family:'robotoregular', arial, Helvetica, sans-serif;
     width: 100%;
+    max-width: 1000px;
     margin:auto;
     display: flex;
     flex-direction: column;
@@ -178,11 +179,11 @@ button{
         fill:$font-color-light;
     }
 }
-/*
+
 .page__index{
     animation: loadingPage 100ms 3900ms both;
 }
-*/
+
 header{
     background-color: $bg-base;
     height: auto;

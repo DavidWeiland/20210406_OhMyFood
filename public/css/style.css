@@ -94,6 +94,7 @@
 body {
   font-family: "robotoregular", arial, Helvetica, sans-serif;
   width: 100%;
+  max-width: 1000px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -146,11 +147,10 @@ button {
   fill: #FFF;
 }
 
-/*
-.page__index{
-    animation: loadingPage 100ms 3900ms both;
+.page__index {
+  animation: loadingPage 100ms 3900ms both;
 }
-*/
+
 header {
   background-color: #EAEAEA;
   height: auto;
