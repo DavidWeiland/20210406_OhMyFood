@@ -4,3 +4,18 @@
     border-radius: 3.5em 3.5em 0 0;
     padding-top: 1em;
 }
+
+.restaurant__title{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.restaurant__svg{
+    box-sizing: border-box;
+    padding-top: 1em;
+}
+
+article{
+    @extend section;
+    @extend .restaurant;
+}

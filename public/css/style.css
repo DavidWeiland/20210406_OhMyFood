@@ -15,14 +15,32 @@
     opacity: 0;
   }
 }
+@keyframes apparaitMenu {
+  0% {
+    opacity: 0;
+    transform: translateY(5em);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 @keyframes slide {
   0% {
     transform: translateX(5em);
-    opacity: 0;
   }
   100% {
     transform: translateX(0);
-    opacity: 1;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(-0.2turn);
+  }
+  100% {
+    transform: rotate(0);
   }
 }
 /*Vendors*/
@@ -115,6 +133,12 @@
   padding-right: 0.5em;
   fill: #FFF;
 }
+.icon__checked {
+  width: 1.7em;
+  height: 1.7em;
+  padding: 33%;
+  fill: #FFF;
+}
 
 .resto__info--svg {
   display: flex;
@@ -146,14 +170,15 @@ h1, h3, h2 {
   margin: 0;
 }
 
-.restaurant h1, .restaurant h3, .restaurant h2 {
+.restaurant h1, article h1, .restaurant h3, article h3, .restaurant h2, article h2 {
   font-family: "shrikhand", Arial, Helvetica, sans-serif;
   font-size: 2.2em;
   margin-top: 1em;
 }
 
-.restaurant h2 {
+.restaurant h2, article h2 {
   font-family: "robotolight", Arial, Helvetica, sans-serif;
+  align-self: flex-start;
   font-size: 1.3em;
   font-weight: normal;
   width: 2.5em;
@@ -229,7 +254,7 @@ header {
   fill: #FFF;
 }
 
-section {
+section, article {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -240,9 +265,11 @@ section {
   padding-bottom: 10%;
   height: 100%;
 }
-section > * {
+section > *, article > * {
   width: 90%;
   margin: 2%;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 footer {
@@ -374,7 +401,7 @@ footer ul li {
   margin-right: 5%;
 }
 
-.restaurants, .restaurant {
+.restaurants, .restaurant, article {
   background-color: #F6F6F6;
   height: 100%;
 }
@@ -455,9 +482,19 @@ footer ul li {
   object-fit: cover;
 }
 
-.restaurant {
+.restaurant, article {
   margin-top: -3em;
   border-radius: 3.5em 3.5em 0 0;
+  padding-top: 1em;
+}
+
+.restaurant__title {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.restaurant__svg {
+  box-sizing: border-box;
   padding-top: 1em;
 }
 
@@ -478,6 +515,7 @@ footer ul li {
   margin-top: 2%;
   margin-bottom: 2%;
   width: 100%;
+  overflow: hidden;
 }
 .plat:hover {
   background-color: #FFF;
@@ -487,11 +525,22 @@ footer ul li {
 }
 .plat:hover .plat__precis--prix {
   width: 30%;
-  transform: translateX(0);
+  animation: slide 400ms 100ms both;
 }
 .plat:hover .plat__precis--select {
-  opacity: 1;
-  transform: translateX(0);
+  animation: slide 400ms 100ms forwards;
+}
+.plat:hover .plat__precis--select .icon__checked {
+  animation: rotate 400ms 300ms both;
+}
+.plat__animation--1 {
+  animation: apparaitMenu 1000ms 100ms both;
+}
+.plat__animation--2 {
+  animation: apparaitMenu 1000ms 200ms both;
+}
+.plat__animation--3 {
+  animation: apparaitMenu 1000ms 300ms both;
 }
 
 .plat__precis {
@@ -548,19 +597,15 @@ footer ul li {
 .plat__precis--select {
   background-color: #99E2D0;
   color: #FFF;
-  border-radius: 0 1.563em 1.563em 0;
+  border-radius: 0 1em 1em 0;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   font-family: "roboto", Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  font-weight: bold;
   width: 6em;
   height: 100%;
   margin: initial;
   text-align: center;
-  padding: 5%;
-  opacity: 0;
   transform: translateX(5em);
 }
 

@@ -43,6 +43,7 @@
     margin-top: 2%;
     margin-bottom: 2%;
     width: 100%;
+    overflow: hidden;
     &:hover{
         background-color: $bg-primary-color;
         .plat__precis{
@@ -50,12 +51,23 @@
         }
         .plat__precis--prix{
             width: 30%;
-            transform: translateX(0);
+            animation: slide 400ms 100ms both;
             }
         .plat__precis--select{
-            opacity: 1;
-        transform: translateX(0);
+            animation: slide 400ms 100ms forwards;
+            .icon__checked{
+            animation: rotate 400ms 300ms both;
+            }
         }
+    }
+    &__animation--1{
+        animation: apparaitMenu 1000ms 100ms both;
+    }
+    &__animation--2{
+        animation: apparaitMenu 1000ms 200ms both;
+    }
+    &__animation--3{
+        animation: apparaitMenu 1000ms 300ms both;
     }
 }
 .plat__precis{
@@ -111,19 +123,15 @@
     &--select{
         background-color: $tertiary-color;
         color:$font-color-light;
-        border-radius: 0 1.563em 1.563em 0;
+        border-radius: 0 1em 1em 0;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
         font-family: 'roboto', Arial, Helvetica, sans-serif;
-        font-size: 1em;
-        font-weight: bold;
         width: 6em;
         height: 100%;
         margin: initial;
         text-align: center;
-        padding:5%;
-        opacity:0;
         transform: translateX(5em);
         
 

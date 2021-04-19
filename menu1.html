@@ -55,6 +55,9 @@
                 <circle class="icon__wait--7"cx="16" cy="64" r="6.438" transform="rotate(270 64 64)"/>
                 <circle class="icon__wait--8"cx="16" cy="64" r="5.375" transform="rotate(315 64 64)"/>
             </symbol>
+            <symbol id="checked-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/>
+            </symbol>
         </svg>    
         <header class="page__menu">
             <div class="container container--entete">
@@ -67,93 +70,137 @@
             </div>
         </header>
         <main class="page__menu">
-            <section class="restaurant">
+            <section class="restaurant restaurant__title">
                 <h1>À la française</h1>
-                <article class="menu">
-                    <h2 class="menu__titre">ENTRÉES</h2>
-                    <ul class="menu__choix">
-                        <li class="plat">
-                            <div class="plat__precis">
-                                <p class="plat__precis--nom">Tartare de poulpe acidulé</p>
-                                <p class="plat__precis--ingredients">Aux zestes d'orange</p>
-                            </div>
-                            <p class="plat__precis--prix">25€</p>
-                            <p class="plat__precis--select">OK</p>
-                        </li>
-                        <li class="plat">
+                <div class="restaurant__svg resto__info--svg">
+                    <svg class="icon icon__vignette icon__vignette--regular">
+                        <use href="#heart-regular"/>
+                    </svg>
+                    <svg class="icon icon__vignette icon__vignette--solid">
+                        <use href="#heart-solid"/>
+                    </svg>
+                </div>
+            </section>
+            <article class="menu">
+                <h2 class="menu__titre">ENTRÉES</h2>
+                <ul class="menu__choix">
+                    <li class="plat plat__animation--1">
+                        <div class="plat__precis">
+                            <p class="plat__precis--nom">Tartare de poulpe acidulé</p>
+                            <p class="plat__precis--ingredients">Aux zestes d'orange</p>
+                        </div>
+                        <p class="plat__precis--prix">25€</p>
+                        <p class="plat__precis--select">
+                            <svg class="icon__checked">
+                                <use href="#checked-circle"/>
+                            </svg>
+                        </p>
+                    </li>
+                        <li class="plat plat__animation--2">
                             <div class="plat__precis">
                                 <p class="plat__precis--nom">Velouté de légumes d'antan</p>
                                 <p class="plat__precis--ingredients">Carottes, panais, topinambour</p>
                             </div>
                             <p class="plat__precis--prix">35€</p>
-                            <p class="plat__precis--select">OK</p>
+                            <p class="plat__precis--select">
+                                <svg class="icon__checked">
+                                    <use href="#checked-circle"/>
+                                </svg>
+                            </p>
                         </li>
-                        <li class="plat">
+                        <li class="plat plat__animation--3">
                             <div class="plat__precis">
                                 <p class="plat__precis--nom">Soupe à l'oignon</p>
                                 <p class="plat__precis--ingredients">Revisitée</p>
                             </div>
                             <p class="plat__precis--prix">20€</p>
-                            <p class="plat__precis--select">OK</p>
+                            <p class="plat__precis--select">
+                                <svg class="icon__checked">
+                                    <use href="#checked-circle"/>
+                                </svg>
+                            </p>
                         </li>
                     </ul>
                     <h2 class="menu__titre">PLATS</h2>
                     <ul class="menu__choix">
-                        <li class="plat">
+                        <li class="plat plat__animation--1">
                             <div class="plat__precis">
                                 <p class="plat__precis--nom">Coquilles Saint-Jacques</p>
                                 <p class="plat__precis--ingredients">Accompagnées d'une purée de panais</p>
                             </div>
                             <p class="plat__precis--prix">40€</p>
-                            <p class="plat__precis--select">OK</p>
+                            <p class="plat__precis--select">
+                                <svg class="icon__checked">
+                                    <use href="#checked-circle"/>
+                                </svg>
+                            </p>
                         </li>
-                        <li class="plat">
+                        <li class="plat plat__animation--2">
                             <div class="plat__precis">
                                 <p class="plat__precis--nom">Magret de Canard</p>
                                 <p class="plat__precis--ingredients">Paramentier de pommes de terre</p>
                             </div>
                             <p class="plat__precis--prix">35€</p>
-                            <p class="plat__precis--select">OK</p>
+                            <p class="plat__precis--select">
+                                <svg class="icon__checked">
+                                    <use href="#checked-circle"/>
+                                </svg>
+                            </p>
                         </li>
-                        <li class="plat">
+                        <li class="plat plat__animation--3">
                             <div class="plat__precis">
                                 <p class="plat__precis--nom">Pigeonneau d'Ille-et-Vilaine</p>
                                 <p class="plat__precis--ingredients">Sur son lit de gnocchis aux légumes</p>
                             </div>
                             <p class="plat__precis--prix">44€</p>
-                            <p class="plat__precis--select">OK</p>
+                            <p class="plat__precis--select">
+                                <svg class="icon__checked">
+                                    <use href="#checked-circle"/>
+                                </svg>
+                            </p>
                         </li>
                     </ul>
                     <h2 class="menu__titre">DESSERTS</h2>
                     <ul class="menu__choix">
-                        <li class="plat">
+                        <li class="plat plat__animation--1">
                             <div class="plat__precis">
                                 <p class="plat__precis--nom">Pétales de violettes glacées</p>
                                 <p class="plat__precis--ingredients">Et purée de noisettes</p>
                             </div>
                             <p class="plat__precis--prix">18€</p>
-                            <p class="plat__precis--select">OK</p>
+                            <p class="plat__precis--select">
+                                <svg class="icon__checked">
+                                    <use href="#checked-circle"/>
+                                </svg>
+                            </p>
                         </li>
-                        <li class="plat">
+                        <li class="plat plat__animation--2">
                             <div class="plat__precis">
                                 <p class="plat__precis--nom">Fondant au chocolat</p>
                                 <p class="plat__precis--ingredients">Revisité</p>
                             </div>
                             <p class="plat__precis--prix">22€</p>
-                            <p class="plat__precis--select">OK</p>
+                            <p class="plat__precis--select">
+                                <svg class="icon__checked">
+                                    <use href="#checked-circle"/>
+                                </svg>
+                            </p>
                         </li>
-                        <li class="plat">
+                        <li class="plat plat__animation--3">
                             <div class="plat__precis">
                                 <p class="plat__precis--nom">Millefeuille croustillant</p>
                                 <p class="plat__precis--ingredients">Myrtilles et pâte d'amande</p>
                             </div>
                             <p class="plat__precis--prix">23€</p>
-                            <p class="plat__precis--select">OK</p>
+                            <p class="plat__precis--select">
+                                <svg class="icon__checked">
+                                    <use href="#checked-circle"/>
+                                </svg>
+                            </p>
                         </li>
                     </ul>
-                </article>
                 <button type="submit" class ="btn btn__menu">Commander</button>
-            </section>
+            </article>
         </main>
         <footer class="page__menu">
             <svg class="logo logo--footer">

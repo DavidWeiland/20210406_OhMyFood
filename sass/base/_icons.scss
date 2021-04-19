@@ -66,6 +66,12 @@
         padding-right: 0.5em;
         fill:$font-color-light;
     }
+    &__checked{
+        width: 1.7em;
+        height: 1.7em;
+        padding: 33%;
+        fill:$font-color-light;
+    }
 }
 
 .resto__info--svg{

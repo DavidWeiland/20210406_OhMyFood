@@ -16,13 +16,34 @@
     }
 }
 
+@keyframes apparaitMenu{
+    0% {
+        opacity: 0;
+        transform:translateY(5em);
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
 @keyframes slide{
     0% {
         transform: translateX(5em);
-        opacity: 0;
     }
     100%{
         transform:translateX(0);
-        opacity: 1;
+    }
+}
+
+@keyframes rotate{
+    0% {
+        transform: rotate(-0.2turn);
+    }
+    100%{
+        transform:rotate(0);
     }
 }
