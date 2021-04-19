@@ -32,56 +32,68 @@
         }
     }
     &__search{
-        width: 1.5em;
-        height: 1.5em;
+        width: 1em;
+        height: 1em;
         fill:$font-color-base;
     }
     &__fonctionnement{
         fill:$font-color-mid-dark;
-        width: 1.25em;
-        height: 1.25em;
+        width: 1.12em;
+        height: 1.12em;
+        margin-right: 1em;
     }
     &__vignette{
-        width: 2em;
-        height: 2em;
-        padding-top:1em;
+        width: 100%;
+        height: 100%;
         align-self: flex-start;
         &--solid{
-            fill:$primary-color;
             margin: 0;
             position: relative;
-            right: 1em;
+            right: 50%;
+            top:0;
             opacity: 0;
+            cursor: pointer;
         }
         &--regular{
             fill:$font-color-dark;
             margin: 0;
-            position:relative;
-            right: -1em;
+            
         }
     }
     &__footer{
-        width: 0.8em;
-        height: 0.8em;
+        width: 0.9em;
+        height: 0.9em;
         padding-right: 0.5em;
         fill:$font-color-light;
     }
     &__checked{
-        width: 1.7em;
-        height: 1.7em;
-        padding: 33%;
+        width: 1.4em;
+        height: 1.4em;
+        padding: 35%;
         fill:$font-color-light;
     }
 }
 
+.heart-solid{
+    .stop1{
+        stop-color:$primary-color;
+    }
+    .stop2{
+        stop-color:$secondary-color;
+    }
+}
 .resto__info--svg{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 5em;
-    height: 5em;
+    width: 3em;
+    height: 3.5em;
     background-color:transparent;
+    margin-right: 1em;
     &:hover .icon__vignette--solid{
-        animation: apparait 1000ms;
+        animation: apparait 1000ms forwards;
+    }
+    &:hover .icon__vignette--regular{
+        animation: disparait 1000ms forwards;
     }
 }

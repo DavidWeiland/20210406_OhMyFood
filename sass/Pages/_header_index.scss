@@ -3,9 +3,9 @@
         background-color: $bg-secondary-color;
         height: auto;
         text-align: center;
-        padding: 10%;
+        padding: 5%;
         h1{
-            width: 90%;
+            width: 85%;
         }
     }
     &--lieu{
@@ -22,7 +22,7 @@
 }
 
 #mapSearch{
-    font-size: 1.3em;
+    font-size: 1em;
     color:$font-color-base;
     border-color: transparent;
     background-color:transparent;

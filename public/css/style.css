@@ -99,57 +99,67 @@
   fill-opacity: 0.3;
 }
 .icon__search {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1em;
+  height: 1em;
   fill: #000;
 }
 .icon__fonctionnement {
   fill: #7E7E7E;
-  width: 1.25em;
-  height: 1.25em;
+  width: 1.12em;
+  height: 1.12em;
+  margin-right: 1em;
 }
 .icon__vignette {
-  width: 2em;
-  height: 2em;
-  padding-top: 1em;
+  width: 100%;
+  height: 100%;
   align-self: flex-start;
 }
 .icon__vignette--solid {
-  fill: #9356DC;
   margin: 0;
   position: relative;
-  right: 1em;
+  right: 50%;
+  top: 0;
   opacity: 0;
+  cursor: pointer;
 }
 .icon__vignette--regular {
   fill: #101010;
   margin: 0;
-  position: relative;
-  right: -1em;
 }
 .icon__footer {
-  width: 0.8em;
-  height: 0.8em;
+  width: 0.9em;
+  height: 0.9em;
   padding-right: 0.5em;
   fill: #FFF;
 }
 .icon__checked {
-  width: 1.7em;
-  height: 1.7em;
-  padding: 33%;
+  width: 1.4em;
+  height: 1.4em;
+  padding: 35%;
   fill: #FFF;
+}
+
+.heart-solid .stop1 {
+  stop-color: #9356DC;
+}
+.heart-solid .stop2 {
+  stop-color: #FF79DA;
 }
 
 .resto__info--svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5em;
-  height: 5em;
+  width: 3em;
+  height: 3.5em;
   background-color: transparent;
+  margin-right: 1em;
 }
 .resto__info--svg:hover .icon__vignette--solid {
-  animation: apparait 1000ms;
+  animation: apparait 1000ms forwards;
+}
+.resto__info--svg:hover .icon__vignette--regular {
+  animation: disparait 1000ms forwards;
 }
 
 body {
@@ -165,21 +175,23 @@ body {
 }
 
 h1, h3, h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
   margin: 0;
 }
 
 .restaurant h1, article h1, .restaurant h3, article h3, .restaurant h2, article h2 {
   font-family: "shrikhand", Arial, Helvetica, sans-serif;
-  font-size: 2.2em;
+  font-size: 1.7em;
+  font-weight: normal;
   margin-top: 1em;
+  width: 90%;
 }
 
 .restaurant h2, article h2 {
   font-family: "robotolight", Arial, Helvetica, sans-serif;
   align-self: flex-start;
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: normal;
   width: 2.5em;
   padding-top: 0.5em;
@@ -188,12 +200,12 @@ h1, h3, h2 {
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 p {
   font-family: "robotolight", Arial, sans-serif;
-  font-size: 1.4em;
+  font-size: 1.1em;
   color: #353535;
 }
 
@@ -204,25 +216,26 @@ a {
 
 /*composants*/
 .btn {
-  height: 3.1em;
+  height: 3.5em;
   border: 0;
-  border-radius: 1.563em 1.563em 1.563em 1.563em;
+  border-radius: 2em 2em 2em 2em;
   background: linear-gradient(0.98turn, #9356DC, #FF79DA);
   color: #FFF;
-  font-size: 1.2em;
+  font-size: 0.9em;
   cursor: pointer;
   margin: 5%;
-  box-shadow: 0 0.313em 0.313em #C6C6C6;
+  box-shadow: 0 0.35em 0.35em #C6C6C6;
 }
 .btn:active {
-  border-left: 3px grey solid;
-  border-top: 3px grey solid;
+  border-left: 3px #7E7E7E solid;
+  border-top: 3px #7E7E7E solid;
 }
 
 /*layout*/
 header {
   background-color: #EAEAEA;
   height: auto;
+  width: 100%;
 }
 
 .container {
@@ -235,7 +248,7 @@ header {
 .container--entete {
   width: 100%;
   background-color: #FFF;
-  height: 5em;
+  height: 3.9em;
   box-shadow: 0 0.125em 0.313em #7E7E7E;
 }
 
@@ -244,13 +257,13 @@ header {
   justify-content: center;
   margin: auto;
   width: auto;
-  height: 50%;
+  height: 45%;
   fill: #101010;
 }
 .logo--footer {
   padding: unset;
-  height: 2em;
-  width: 8em;
+  height: 1.12em;
+  width: 6.12em;
   fill: #FFF;
 }
 
@@ -280,7 +293,7 @@ footer {
 footer ul {
   list-style-type: none;
   padding: 0;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 footer ul li {
   margin-top: 2%;
@@ -291,10 +304,10 @@ footer ul li {
   background-color: #F6F6F6;
   height: auto;
   text-align: center;
-  padding: 10%;
+  padding: 5%;
 }
 .container--notice h1, .container--notice h2, .container--notice h3 {
-  width: 90%;
+  width: 85%;
 }
 .container--lieu {
   box-sizing: border-box;
@@ -309,7 +322,7 @@ footer ul li {
 }
 
 #mapSearch {
-  font-size: 1.3em;
+  font-size: 1em;
   color: #000;
   border-color: transparent;
   background-color: transparent;
@@ -357,11 +370,11 @@ footer ul li {
 }
 .fonctionnement__list--element, .plat {
   background-color: #F6F6F6;
-  border-radius: 1.563em;
+  border-radius: 1.3em;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 6em;
+  height: 4.5em;
   width: 95%;
   margin: 6%;
   box-shadow: 0 0.313em 0.313em #C6C6C6;
@@ -382,9 +395,9 @@ footer ul li {
   text-align: center;
   vertical-align: center;
   padding: 1%;
-  width: 2em;
-  height: 2em;
-  font-size: 1.1em;
+  width: 1.8em;
+  height: 1.8em;
+  font-size: 0.8em;
   border-radius: 100%;
   margin-left: -0.81em;
 }
@@ -393,8 +406,8 @@ footer ul li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 2%;
-  font-family: "roboto_regular", Arial, sans-serif;
+  padding: 3%;
+  font-family: "robotoregular", Arial, sans-serif;
   font-weight: bold;
 }
 .fonctionnement__list--text svg {
@@ -412,7 +425,7 @@ footer ul li {
   flex-direction: column;
   justify-content: flex-start;
   background-color: #FFF;
-  height: 21em;
+  height: 15.5em;
   border-radius: 0.6875em;
   box-sizing: border-box;
   box-shadow: 0 0.313em 0.313em #C6C6C6;
@@ -435,7 +448,7 @@ footer ul li {
   color: #018766;
   font-weight: bold;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 0.8em;
   padding: 1%;
   width: 22%;
   height: 15%;
@@ -477,25 +490,25 @@ footer ul li {
 
 .menu__image {
   width: 100%;
-  height: 100%;
+  height: 16em;
   box-sizing: border-box;
   object-fit: cover;
 }
 
 .restaurant, article {
-  margin-top: -3em;
-  border-radius: 3.5em 3.5em 0 0;
+  margin-top: -2.8em;
+  border-radius: 2.5em 2.5em 0 0;
   padding-top: 1em;
 }
 
 .restaurant__title {
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .restaurant__svg {
   box-sizing: border-box;
   padding-top: 1em;
+  margin-left: initial;
 }
 
 .btn__menu {
@@ -521,10 +534,10 @@ footer ul li {
   background-color: #FFF;
 }
 .plat:hover .plat__precis {
-  width: 80%;
+  min-width: 50%;
+  max-width: 60%;
 }
 .plat:hover .plat__precis--prix {
-  width: 30%;
   animation: slide 400ms 100ms both;
 }
 .plat:hover .plat__precis--select {
@@ -544,7 +557,8 @@ footer ul li {
 }
 
 .plat__precis {
-  width: 100%;
+  min-width: 80%;
+  max-width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -556,7 +570,7 @@ footer ul li {
 }
 .plat__precis--nom {
   font-family: "roboto", Arial, Helvetica, sans-serif;
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: bold;
   width: 100%;
   height: auto;
@@ -568,7 +582,7 @@ footer ul li {
 .plat__precis--ingredients {
   font-family: "robotolight", Arial, Helvetica, sans-serif;
   font-weight: normal;
-  font-size: 1.1em;
+  font-size: 0.9em;
   width: 100%;
   height: auto;
   padding: 0;
@@ -584,15 +598,13 @@ footer ul li {
   box-sizing: border-box;
   border-radius: 0 1.563em 1.563em 0;
   font-family: "roboto", Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: bold;
-  width: 10%;
+  width: 30%;
   height: 100%;
   margin: initial;
   text-align: center;
   padding: 5%;
-  transform: translateX(5em);
-  animation: transform 400ms ease-in-out;
 }
 .plat__precis--select {
   background-color: #99E2D0;

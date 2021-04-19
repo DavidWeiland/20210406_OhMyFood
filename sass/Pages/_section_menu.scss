@@ -1,18 +1,18 @@
 .restaurant{
     @extend .restaurants;
-    margin-top : -3em;
-    border-radius: 3.5em 3.5em 0 0;
+    margin-top : -2.8em;
+    border-radius: 2.5em 2.5em 0 0;
     padding-top: 1em;
 }
 
 .restaurant__title{
     flex-direction: row;
-    justify-content: space-between;
 }
 
 .restaurant__svg{
     box-sizing: border-box;
     padding-top: 1em;
+    margin-left: initial;
 }
 
 article{

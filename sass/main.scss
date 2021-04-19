@@ -47,10 +47,10 @@
     &:hover{
         background-color: $bg-primary-color;
         .plat__precis{
-            width: 80%;
+            min-width: 50%;
+            max-width: 60%;
         }
         .plat__precis--prix{
-            width: 30%;
             animation: slide 400ms 100ms both;
             }
         .plat__precis--select{
@@ -71,7 +71,8 @@
     }
 }
 .plat__precis{
-    width: 100%;
+    min-width: 80%;
+    max-width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -82,7 +83,7 @@
     padding:1%;
     &--nom{
     font-family: 'roboto', Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: bold;
     width:100%;
     height: auto;
@@ -94,7 +95,7 @@
     &--ingredients{
     font-family: 'robotolight', Arial, Helvetica, sans-serif;
     font-weight: normal;
-    font-size: 1.1em;
+    font-size: 0.9em;
     width: 100%;
     height:auto;
     padding:0;
@@ -110,15 +111,14 @@
         box-sizing: border-box;
         border-radius: 0 1.563em 1.563em 0;
         font-family: 'roboto', Arial, Helvetica, sans-serif;
-        font-size: 1em;
+        font-size: 0.9em;
         font-weight: bold;
-        width: 10%;
+        width: 30%;
         height: 100%;
         margin: initial;
         text-align: center;
         padding:5%;
-        transform: translateX(5em);
-        animation: transform 400ms ease-in-out;
+
     }
     &--select{
         background-color: $tertiary-color;
@@ -133,7 +133,5 @@
         margin: initial;
         text-align: center;
         transform: translateX(5em);
-        
-
     }
 }
