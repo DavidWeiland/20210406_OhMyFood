@@ -1,11 +1,14 @@
 .logo{
     &--debut{
-        display: flex;
+        /*display: flex;
         justify-content: center;
-        margin: auto;
-        width: auto;
+        margin: auto;*/
+        width: 10.19em;
         height: 45%;
         fill:$font-color-dark;
+        position:absolute;
+        top:initial;
+        left:initial;
     }
     &--footer{
         padding:unset;
