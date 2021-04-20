@@ -1,0 +1,15 @@
+.btn{
+    height: 3.5em;
+    border:0;
+    border-radius: 2em 2em 2em 2em;
+    background: linear-gradient(0.98turn, $primary-color, $secondary-color);
+    color: $font-color-light;
+    font-size: 0.9em;
+    cursor: pointer;
+    margin:5%;
+    box-shadow: 0 0.35em 0.35em $font-color-mid-light;
+    &:active{
+        border-left: 3px $font-color-mid-dark solid;
+        border-top : 3px $font-color-mid-dark solid;
+    }
+}

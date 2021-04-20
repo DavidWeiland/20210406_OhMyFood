@@ -1,0 +1,31 @@
+header{
+    background-color: $bg-base;
+    height: auto;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    &--entete{
+        width: 100%;
+        background-color: $bg-primary-color;
+        height: 3.9em;
+        box-shadow:0 0.125em 0.313em $font-color-mid-dark;
+    }
+}
+
+.return{
+    width: 1.5em;
+    height: 1.5em;
+    fill:$font-color-dark;
+    position:absolute;
+    top:1em;
+    left:1em;
+    
+}

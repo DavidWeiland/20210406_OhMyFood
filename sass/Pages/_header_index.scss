@@ -1,0 +1,37 @@
+.container{
+    &--notice{
+        background-color: $bg-secondary-color;
+        height: auto;
+        text-align: center;
+        padding: 5%;
+        z-index: 2;
+        h1{
+            width: 85%;
+        }
+    }
+    &--lieu{
+        box-sizing: border-box;
+        width: 50%;
+        height:auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        margin: auto;
+        padding:3%;
+    }
+}
+
+#mapSearch{
+    font-size: 1em;
+    color:$font-color-base;
+    border-color: transparent;
+    background-color:transparent;
+    width: 90%;
+    height: auto;
+    margin-left: 2%;
+}
+
+::placeholder{
+    color:$font-color-base;
+}

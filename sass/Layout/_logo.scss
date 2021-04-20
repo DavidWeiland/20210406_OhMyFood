@@ -1,0 +1,15 @@
+.logo{
+    &--debut{
+        margin: auto;
+        width: 10.19em;
+        height: 45%;
+        fill:$font-color-dark;
+        
+    }
+    &--footer{
+        padding:unset;
+        height: 1.12em;
+        width: 6.12em;
+        fill:$font-color-light;
+    }
+}

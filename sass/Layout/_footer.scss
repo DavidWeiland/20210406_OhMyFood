@@ -1,0 +1,17 @@
+footer{
+    background-color: $bg-tertiary-color;
+    color:$font-color-light;
+    padding:5%;
+    & ul{
+        list-style-type: none;
+        padding:0;
+        font-size: 1em;
+        & li{
+            margin-top:2%;
+        }
+    }
+    a{
+        color:$font-color-light;
+        text-decoration: none;
+    }
+}

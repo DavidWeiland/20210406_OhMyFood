@@ -1,0 +1,22 @@
+.spinner{
+    width: 20%;
+    height: auto;
+    margin:auto;
+    position:absolute;
+    top:30%;
+    left:40%;
+    display:flex;
+    justify-content: center;
+}
+
+.spinner__icon{
+    &--wait{
+        transform: rotate(1.5turn);
+        transition: transform 5000ms ease-out;
+        animation: disparait 100ms 2900ms both;
+    }
+}
+
+.page__index{
+    animation: apparait 100ms 2900ms both;
+}
