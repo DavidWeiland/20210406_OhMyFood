@@ -46,17 +46,24 @@
 /*Vendors*/
 /*base*/
 @font-face {
-  font-family: "robotoregular";
+  font-family: "roboto";
   src: url("../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot");
   src: url("../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff2") format("woff2"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular") format("svg");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "robotolight";
+  font-family: "roboto";
   src: url("../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.eot");
   src: url("../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.woff2") format("woff2"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.woff") format("woff"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.ttf") format("truetype"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.svg#robotolight") format("svg");
-  font-weight: lighter;
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/roboto-fontfacekit/web-fonts/roboto_bold_macroman/Roboto-Bold-webfont.eot");
+  src: url("../fonts/roboto-fontfacekit/web-fonts/roboto_bold_macroman/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_bold_macroman/Roboto-Bold-webfont.woff") format("woff"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_bold_macroman/Roboto-Bold-webfont.ttf") format("truetype"), url("../fonts/roboto-fontfacekit/web-fonts/roboto_bold_macroman/Roboto-Bold-webfont.svg#robotoblack") format("svg");
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
@@ -135,7 +142,6 @@
 .icon__checked {
   width: 1.4em;
   height: 1.4em;
-  padding: 35%;
   fill: #FFF;
 }
 
@@ -172,7 +178,7 @@
 }
 
 body {
-  font-family: "robotoregular", arial, Helvetica, sans-serif;
+  font-family: "roboto", arial, Helvetica, sans-serif;
   width: 100%;
   max-width: 1000px;
   margin: auto;
@@ -198,10 +204,10 @@ h1, h3, h2 {
 }
 
 .restaurant h2, article h2 {
-  font-family: "robotolight", Arial, Helvetica, sans-serif;
+  font-family: "roboto", Arial, Helvetica, sans-serif;
   align-self: flex-start;
   font-size: 1em;
-  font-weight: normal;
+  font-weight: lighter;
   width: 2.5em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -213,7 +219,8 @@ h3 {
 }
 
 p {
-  font-family: "robotolight", Arial, sans-serif;
+  font-family: "roboto", Arial, sans-serif;
+  font-weight: lighter;
   font-size: 1.1em;
   color: #353535;
 }
@@ -221,6 +228,9 @@ p {
 a {
   text-decoration: none;
   cursor: pointer;
+}
+a:visited {
+  color: #000;
 }
 
 /*composants*/
@@ -296,16 +306,6 @@ section > *, article > * {
   margin-left: 1em;
   margin-right: 1em;
 }
-section__corps {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-section__corps > * {
-  max-width: 450px;
-  margin-top: 2%;
-}
 
 footer {
   background-color: #353535;
@@ -319,6 +319,10 @@ footer ul {
 }
 footer ul li {
   margin-top: 2%;
+}
+footer a {
+  color: #FFF;
+  text-decoration: none;
 }
 
 /*pages*/
@@ -372,11 +376,11 @@ footer ul li {
 .spinner__icon--wait {
   transform: rotate(1.5turn);
   transition: transform 5000ms ease-out;
-  animation: disparait 100ms 3900ms both;
+  animation: disparait 100ms 2900ms both;
 }
 
 .page__index {
-  animation: apparait 100ms 3900ms both;
+  animation: apparait 100ms 2900ms both;
 }
 
 .btn__formulaire {
@@ -390,6 +394,7 @@ footer ul li {
   list-style-type: none;
   list-style-position: inside;
   padding: 0;
+  width: 90%;
 }
 .fonctionnement__list--element, .plat {
   background-color: #F6F6F6;
@@ -398,8 +403,9 @@ footer ul li {
   justify-content: flex-start;
   align-items: center;
   height: 4.5em;
-  width: 95%;
-  margin: 6%;
+  width: 98%;
+  margin-left: 2%;
+  margin-top: 6%;
   box-shadow: 0 0.313em 0.313em #C6C6C6;
 }
 .fonctionnement__list--element > *, .plat > * {
@@ -442,33 +448,39 @@ footer ul li {
   height: 100%;
 }
 
+.section__corps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .vignette {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background-color: #FFF;
+  width: 100%;
+  max-width: 400px;
   height: 15.5em;
   border-radius: 0.6875em;
-  box-sizing: border-box;
   box-shadow: 0 0.313em 0.313em #C6C6C6;
-}
-.vignette a {
-  width: 100%;
-  height: 68%;
+  margin: 2%;
 }
 .vignette__image {
   border-radius: 0.6875em 0.6875em 0em 0em;
   width: 100%;
-  height: 100%;
+  height: 68%;
   object-position: 50% 60%;
   object-fit: cover;
-  cursor: pointer;
+  margin: initial;
 }
 .vignette__new {
   box-sizing: border-box;
   background-color: #99E2D0;
   color: #018766;
+  margin: 0;
   font-weight: bold;
   text-align: center;
   font-size: 0.8em;
@@ -476,8 +488,8 @@ footer ul li {
   width: 22%;
   height: 15%;
   position: relative;
-  bottom: 100%;
-  left: 75%;
+  bottom: 60%;
+  left: 70%;
   border-radius: 0.1em;
 }
 .vignette__info {
@@ -488,6 +500,9 @@ footer ul li {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+  margin: 0;
+  position: relative;
+  bottom: 10%;
 }
 .vignette__info--text {
   display: flex;
@@ -519,7 +534,7 @@ footer ul li {
 }
 
 .restaurant, article {
-  margin-top: -2.8em;
+  margin-top: -2.5em;
   border-radius: 2.5em 2.5em 0 0;
   padding-top: 1em;
 }
@@ -534,11 +549,6 @@ footer ul li {
   margin-left: initial;
 }
 
-.btn__menu {
-  width: 50%;
-}
-
-/*themes*/
 .menu__choix {
   list-style: none;
   padding: 0;
@@ -603,7 +613,7 @@ footer ul li {
   text-overflow: ellipsis;
 }
 .plat__precis--ingredients {
-  font-family: "robotolight", Arial, Helvetica, sans-serif;
+  font-family: "roboto", Arial, Helvetica, sans-serif;
   font-weight: normal;
   font-size: 0.9em;
   width: 100%;
@@ -633,6 +643,7 @@ footer ul li {
   background-color: #99E2D0;
   color: #FFF;
   border-radius: 0 1em 1em 0;
+  display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
@@ -640,8 +651,13 @@ footer ul li {
   width: 6em;
   height: 100%;
   margin: initial;
-  text-align: center;
   transform: translateX(5em);
 }
+
+.btn__menu {
+  width: 50%;
+}
+
+/*themes*/
 
 /*# sourceMappingURL=style.css.map */

@@ -13,10 +13,10 @@
     &--wait{
         transform: rotate(1.5turn);
         transition: transform 5000ms ease-out;
-        animation: disparait 100ms 3900ms both;
+        animation: disparait 100ms 2900ms both;
     }
 }
 
 .page__index{
-    animation: apparait 100ms 3900ms both;
+    animation: apparait 100ms 2900ms both;
 }

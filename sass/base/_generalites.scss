@@ -1,5 +1,5 @@
 body{
-    font-family:'robotoregular', arial, Helvetica, sans-serif;
+    font-family:'roboto', arial, Helvetica, sans-serif;
     width: 100%;
     max-width: 1000px;
     margin:auto;
@@ -29,10 +29,10 @@ h2{
 }
 
 .restaurant h2{
-    font-family: 'robotolight', Arial, Helvetica, sans-serif;
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
     align-self: flex-start;
     font-size: 1em;
-    font-weight: normal;
+    font-weight: lighter;
     width: 2.5em;
     padding-top:0.5em;
     padding-bottom: 0.5em;
@@ -45,7 +45,8 @@ h3{
 }
 
 p{
-    font-family:'robotolight', Arial, sans-serif;
+    font-family:'roboto', Arial, sans-serif;
+    font-weight: lighter;
     font-size:1.1em;
     color:$bg-tertiary-color;
 }
@@ -53,4 +54,7 @@ p{
 a{
     text-decoration: none;
     cursor: pointer;
+    &:visited{
+        color:$font-color-base;
+    }
 }

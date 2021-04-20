@@ -4,6 +4,7 @@
         list-style-type:none;
         list-style-position: inside;
         padding:0;
+        width: 90%;
         &--element{
             background-color: $bg-secondary-color;
             border-radius: 1.3em;
@@ -11,8 +12,9 @@
             justify-content:flex-start;
             align-items: center;
             height: 4.5em;
-            width: 95%;
-            margin:6%;
+            width: 98%;
+            margin-left: 2%;
+            margin-top:6%;
             box-shadow: 0 0.313em 0.313em $font-color-mid-light;
             > *{
                 margin:2%;
@@ -55,4 +57,11 @@
 .restaurants{
     background-color: $bg-secondary-color;
     height: 100%;
+}
+
+.section__corps{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
