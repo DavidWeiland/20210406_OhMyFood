@@ -41,12 +41,12 @@ article{
             max-width: 60%;
         }
         .plat__precis--prix{
-            animation: slide 400ms 100ms both;
+            animation: slide 400ms both;
             }
         .plat__precis--select{
-            animation: slide 400ms 100ms forwards;
+            animation: slide 400ms forwards;
             .icon__checked{
-            animation: rotate 400ms 300ms both;
+            animation: rotate 200ms 200ms both;
             }
         }
     }

@@ -52,6 +52,7 @@ p{
 }
 
 a{
+    color:$font-color-base;
     text-decoration: none;
     cursor: pointer;
     &:visited{
