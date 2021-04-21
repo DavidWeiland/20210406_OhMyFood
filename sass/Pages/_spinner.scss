@@ -11,9 +11,7 @@
 
 .spinner__icon{
     &--wait{
-        transform: rotate(1.5turn);
-        transition: transform 5000ms ease-out;
-        animation: disparait 100ms 2900ms both;
+        animation: spinner 2900ms both;
     }
 }
 
