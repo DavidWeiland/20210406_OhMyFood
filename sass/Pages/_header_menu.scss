@@ -4,3 +4,33 @@
     box-sizing: border-box;
     object-fit: cover;
 }
+
+.header__return{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25%;
+    max-width: 250px;
+    height: 100%;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.return{
+    padding:0;
+    width: 1.5em;
+    margin-left: 2em;
+    fill:$font-color-dark;
+}
+
+.header__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    width: 50%;
+    height: 100%;
+    margin:0;
+    margin:initial;
+    box-sizing: border-box;
+}
