@@ -30,8 +30,9 @@
             box-sizing: border-box;
             background-color: $primary-color;
             color:$font-color-light;
-            text-align: center;
-            vertical-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding:1%;
             width: 1.8em;
             height: 1.8em;

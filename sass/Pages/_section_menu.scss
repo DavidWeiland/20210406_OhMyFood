@@ -59,6 +59,9 @@ article{
     &__animation--3{
         animation: apparaitMenu 1000ms 300ms both;
     }
+    &__animation--4{
+        animation: apparaitMenu 1000ms 400ms both;
+    }
 }
 
 .plat__precis{
@@ -107,7 +110,6 @@ article{
         width: 30%;
         height: 100%;
         margin: initial;
-        text-align: center;
         padding:5%;
 
     }
