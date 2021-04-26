@@ -5,9 +5,10 @@ header{
 }
 
 .container{
-    display: flex;
+    @include flexCC;
+    /*display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;*/
     align-items: center;
 }
 

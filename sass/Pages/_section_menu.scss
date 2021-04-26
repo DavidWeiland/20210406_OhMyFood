@@ -68,9 +68,11 @@ article{
     min-width: 80%;
     max-width: 80%;
     height: 100%;
+    @include flexCC;
+    /*
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;*/
     align-items: flex-start;
     overflow: hidden;
     margin:initial;
